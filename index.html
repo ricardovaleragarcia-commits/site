@@ -6,8 +6,18 @@
   <title>Ricardo Valera García</title>
   <meta name="description" content="Graphic Designer &amp; Art Director">
   <meta name="robots" content="max-image-preview:large">
-  <link rel="icon" href="assets/favicon-light.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" id="favicon" href="assets/favicon-light.png">
+  <script>
+    /* Claro por defecto; oscuro si el sistema/navegador está en modo oscuro */
+    (function () {
+      var link = document.getElementById("favicon");
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      function set() { link.href = mq.matches ? "assets/favicon-dark.png" : "assets/favicon-light.png"; }
+      set();
+      if (mq.addEventListener) mq.addEventListener("change", set);
+      else if (mq.addListener) mq.addListener(set);
+    })();
+  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ricardo Valera García">
