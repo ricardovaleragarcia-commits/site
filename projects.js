@@ -115,7 +115,7 @@ These pitch decks were utilized throughout the 2025–2026 season for Soul Arts 
     cover: "assets/covers/wlo7bGVpLJOsL2jAIYgL4rP8SE.png",
     tablet: 6,
     lineHeight: 1.1,
-    info: "Off Scripts.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
+    info: "Off Script.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
     desc: `This speculative project proposes a contemporary visual reinterpretation of three classic theatrical works, translating their tragic narratives into a modern editorial language and human context. Rejecting literal or staged representations, the proposal positions graphic construction as the primary vehicle of conceptual meaning, where the written word assumes a physical body. The tension between the classic, foundational texts of the Western tradition, and the contemporary, the materiality of type, its scale, fragmentation, and spatial behavior, creates a space for reflection where viewers do not merely interpret the work, but encounter themselves within it.
 
 These themes endure precisely because they remain embedded in the contemporary human condition: guilt, loss, and the impossibility of choice. Rather than modernizing these narratives to force relevance, the project recognizes that their resonance is already absolute. The classic essence remains untouched because tragedy was never a matter of form, but of the inevitability of human suffering; what shifts is merely the mirror reflecting it.
