@@ -37,7 +37,7 @@ This human, organic quality is preserved in the custom typography of the logotyp
     cover: "assets/covers/rXWp5yQlcuYmYKUG9hkA5UBONuc.png",
     tablet: 2,
     lineHeight: 1.1,
-    info: "Vestige.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava - Beyond Branding.\nYear: 2025.",
+    info: "Vestige.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
     desc: `Vestige originated in 2025 and remains in active development, evolving continuously to find its most precise form of expression. It is a digital platform and public archive dedicated to indexing the remnants of futures that never came to pass, what I define as 'failed futures.' Reclaiming and resignifying the concept of failure requires directly confronting it, and confronting it begins by giving it a name.
 
 Designed as an open-access archive operating under a museographic framework, the platform frames user contributions as curated artworks. On the home interface, the collective gallery, entries are initially presented under an intentional blur to evoke an experience of discovery and mystery. Hovering over a record reveals the visual or textual artifact, provided the contributor has set its media visibility to public. Users can submit their vestiges freely or via anonymous profiles, retaining total control over whether their uploaded image or document remains hidden or exposed, while the essential narrative inputs, the explanation of the trace and the account of the failed future, remain accessible to illuminate the record.
@@ -115,7 +115,7 @@ These pitch decks were utilized throughout the 2025–2026 season for Soul Arts 
     cover: "assets/covers/wlo7bGVpLJOsL2jAIYgL4rP8SE.png",
     tablet: 6,
     lineHeight: 1.1,
-    info: "Off Scripts.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
+    info: "Off Script.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
     desc: `This speculative project proposes a contemporary visual reinterpretation of three classic theatrical works, translating their tragic narratives into a modern editorial language and human context. Rejecting literal or staged representations, the proposal positions graphic construction as the primary vehicle of conceptual meaning, where the written word assumes a physical body. The tension between the classic, foundational texts of the Western tradition, and the contemporary, the materiality of type, its scale, fragmentation, and spatial behavior, creates a space for reflection where viewers do not merely interpret the work, but encounter themselves within it.
 
 These themes endure precisely because they remain embedded in the contemporary human condition: guilt, loss, and the impossibility of choice. Rather than modernizing these narratives to force relevance, the project recognizes that their resonance is already absolute. The classic essence remains untouched because tragedy was never a matter of form, but of the inevitability of human suffering; what shifts is merely the mirror reflecting it.
