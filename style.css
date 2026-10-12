@@ -28,7 +28,7 @@ p { margin: 0; }
   transform: translate(-50%, -50%);
   z-index: 1;
   mix-blend-mode: difference;
-  white-space: pre;
+  white-space: nowrap;
   text-align: center;
   font-size: 13px;
   line-height: 1.1em;
