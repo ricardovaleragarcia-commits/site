@@ -4,7 +4,7 @@
      Framer; ejecuta descargar-assets.sh para bajarlos al repo y cambiar las rutas.
    - tablet: orden de los proyectos en tablet (810–1199 px).
 */
-var BASE = "https://framerusercontent.com/assets/";
+var BASE = "assets/media/";
 
 var PROJECTS = [
   {
