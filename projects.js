@@ -9,7 +9,7 @@ var BASE = "https://framerusercontent.com/assets/";
 var PROJECTS = [
   {
     title: "Alba Fingerboards, 2022",
-    cover: "assets/covers/ClTlH4VwFsTmSyP8HS3Ejfew7yE.png",
+    cover: "assets/covers/albafingerboards.png",
     tablet: 1,
     lineHeight: 1.1,
     info: "Alba Fingerboards.\nCreative Direction and Brand Identity.\nLocation: Lima, Peru.\nYear: 2022.",
@@ -34,7 +34,7 @@ This human, organic quality is preserved in the custom typography of the logotyp
   },
   {
     title: "Vestige, 2025",
-    cover: "assets/covers/rXWp5yQlcuYmYKUG9hkA5UBONuc.png",
+    cover: "assets/covers/vestige.png",
     tablet: 2,
     lineHeight: 1.1,
     info: "Vestige.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
@@ -57,7 +57,7 @@ The project carries immense emotional weight and humanity, born out of personal 
   },
   {
     title: "Lapsus Records, 2026",
-    cover: "assets/covers/Q6FikpcTMttXxzsyFlKp4YmrzlY.png",
+    cover: "assets/covers/lapsusrecordslpsps20.png",
     tablet: 3,
     lineHeight: 1.1,
     info: "Lapsus Records.\nPerennial Series & LPS-PS20.\nGraphic Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
@@ -76,7 +76,7 @@ The second front was the album redesign itself, which preserves the essence of t
   },
   {
     title: "Hausmann, 2026",
-    cover: "assets/covers/DoWmh43T2IxDHpF8p0o0U5MJk.png",
+    cover: "assets/covers/hausmanncatalogue.png",
     tablet: 4,
     lineHeight: 1.1,
     info: "Hausmann.\nCatalogue 2026-2027.\nEditorial Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
@@ -93,7 +93,7 @@ The second front was the album redesign itself, which preserves the essence of t
   },
   {
     title: "Soul Arts Productions, 2025",
-    cover: "assets/covers/KQwfTVJRwTyi6MwenRraJ4Fw.png",
+    cover: "assets/covers/soulartsproductionsdecks.png",
     tablet: 5,
     lineHeight: 1.1,
     info: "Soul Arts Productions.\nPresentation Design and Graphic Design.\nLocation: Mexico (Remote).\nYear: 2025.",
@@ -112,7 +112,7 @@ These pitch decks were utilized throughout the 2025–2026 season for Soul Arts 
   },
   {
     title: "Off Script, 2025",
-    cover: "assets/covers/wlo7bGVpLJOsL2jAIYgL4rP8SE.png",
+    cover: "assets/covers/offscript.png",
     tablet: 6,
     lineHeight: 1.1,
     info: "Off Script.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
@@ -136,7 +136,7 @@ The architecture of typography, how the word is structured, fragmented, and posi
   },
   {
     title: "Despertares, 2025",
-    cover: "assets/covers/hYRPVXJ1nZq3v8BSGcf5ZlQ3Bk.png",
+    cover: "assets/covers/despertaresmedia.png",
     tablet: 8,
     lineHeight: 1.1,
     info: "Despertares 2025.\nMultimedia Design.\nLocation: Mexico (Remote).\nYear: 2025.",
@@ -154,7 +154,7 @@ The architecture of typography, how the word is structured, fragmented, and posi
   },
   {
     title: "The Midnight Hound, 2024",
-    cover: "assets/covers/pUcylTo57xPIL4r6wJCEgLz1xu0.png",
+    cover: "assets/covers/themidnighthound.png",
     tablet: 7,
     lineHeight: 1.1,
     info: "The Midnight Hound.\nArt Direction.\nLocation: Brazil (Remote).\nYear: 2024.",
@@ -173,7 +173,7 @@ To evoke a subtle yet persistent sense of emotional uncertainty, the design reli
   },
   {
     title: "Parachilna, 2024",
-    cover: "assets/covers/IfWWEWNaSUoqtsBozitRzpNRk.png",
+    cover: "assets/covers/parachilnaasset.png",
     tablet: 9,
     lineHeight: 1.1,
     info: "Parachilna.\nB15 T V GR Reel.\nCreative Direction.\nIn collaboration with Annie Pearlman and Rafaela Barros.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2024.",
@@ -188,7 +188,7 @@ Designed as a high-end digital asset, the creative direction relies on close-up 
   },
   {
     title: "TV Globo, 2025",
-    cover: "assets/covers/TkbKxjK3fKOMN00SwAPnPAGU4U.png",
+    cover: "assets/covers/tvglobodiversidade.png",
     tablet: 10,
     lineHeight: 1.2,
     info: "TV Globo.\nComitê de Diversidade.\nGraphic Design.\nIn collaboration with Rafaela Barros.\nLocation: Brazil (Remote).\nYear: 2025.",
@@ -203,7 +203,7 @@ Developed in collaboration with Rafaela Barros, each symbol translates complex s
   },
   {
     title: "DiskoSlice, 2026",
-    cover: "assets/covers/TbIsjPqONvejVBBpAmBUrLEQI.png",
+    cover: "assets/covers/diskoslice.png",
     tablet: 12,
     lineHeight: 1.1,
     info: "DiskoSlice.\nBrand Identity.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
@@ -226,7 +226,7 @@ This is how DiskoSlice was born, a slice-shop that shares core identity elements
   },
   {
     title: "Lapsus Records, 2026",
-    cover: "assets/covers/MdrEVdb8qPEiP4IdwgW71O6Czw.png",
+    cover: "assets/covers/lapsusrecordslps46.png",
     tablet: 11,
     lineHeight: 1.1,
     info: "Lapsus Records.\nLPS46.\nGraphic Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
