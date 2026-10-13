@@ -60,13 +60,52 @@
     else setTimeout(fn, 600);
   }
 
-  /* Cuando la página ya cargó, baja en segundo plano las 2 primeras imágenes de cada proyecto */
+  /* Los vídeos se bajan de uno en uno, ya con todas las imágenes descargadas */
+  function preloadVideos() {
+    var vids = [];
+    PROJECTS.forEach(function (p) {
+      p.items.forEach(function (it) {
+        if (/\.(mp4|webm)$/i.test(it.media) && !seen[it.media]) {
+          seen[it.media] = true;
+          vids.push(it.media);
+        }
+      });
+    });
+    (function next() {
+      var src = vids.shift();
+      if (!src) return;
+      var v = document.createElement("video");
+      var finished = false;
+      function done() {
+        if (finished) return;
+        finished = true;
+        v.removeAttribute("src");
+        v.load();
+        next();
+      }
+      v.muted = true;
+      v.preload = "auto";
+      v.addEventListener("canplaythrough", done);
+      v.addEventListener("error", done);
+      setTimeout(done, 25000);
+      v.src = src;
+    })();
+  }
+
+  /* Cuando la página ya cargó, baja todo en segundo plano, proyecto a proyecto.
+     Con "ahorro de datos" activado solo baja las 2 primeras imágenes de cada uno,
+     y en móvil no se precargan los vídeos. */
+  var saveData = !!(navigator.connection && navigator.connection.saveData);
+
   window.addEventListener("load", function () {
     var queue = PROJECTS.slice();
     (function next() {
       var p = queue.shift();
-      if (!p) return;
-      preloadProject(p, 2);
+      if (!p) {
+        if (!saveData && !mqMobile.matches) preloadVideos();
+        return;
+      }
+      preloadProject(p, saveData ? 2 : 0);
       idle(next);
     })();
   });
