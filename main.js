@@ -38,6 +38,39 @@
     return node;
   }
 
+  /* ---------- Precarga de imágenes ---------- */
+  var seen = {};
+
+  function preloadImg(src) {
+    if (seen[src] || /\.(mp4|webm)$/i.test(src)) return; // los vídeos no se precargan
+    seen[src] = true;
+    var im = new Image();
+    im.decoding = "async";
+    im.src = src;
+  }
+
+  function preloadProject(p, count) {
+    p.items.slice(0, count || p.items.length).forEach(function (it) {
+      preloadImg(it.media);
+    });
+  }
+
+  function idle(fn) {
+    if (window.requestIdleCallback) window.requestIdleCallback(fn, { timeout: 3000 });
+    else setTimeout(fn, 600);
+  }
+
+  /* Cuando la página ya cargó, baja en segundo plano las 2 primeras imágenes de cada proyecto */
+  window.addEventListener("load", function () {
+    var queue = PROJECTS.slice();
+    (function next() {
+      var p = queue.shift();
+      if (!p) return;
+      preloadProject(p, 2);
+      idle(next);
+    })();
+  });
+
   /* ---------- Rejilla de portadas ---------- */
   PROJECTS.forEach(function (p, index) {
     var art = el("article", "project");
@@ -84,6 +117,7 @@
     }
 
     cover.addEventListener("mouseenter", function (e) {
+      preloadProject(p); // todas las imágenes de este proyecto
       if (mqMobile.matches || openModal) return;
       target(e);
       s.x = s.tx;
@@ -98,6 +132,7 @@
       target(e);
     });
     cover.addEventListener("mouseleave", hideTip);
+    cover.addEventListener("touchstart", function () { preloadProject(p, 3); }, { passive: true });
 
     cover.addEventListener("click", function () {
       hideTip();
