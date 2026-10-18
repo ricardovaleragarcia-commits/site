@@ -34,7 +34,7 @@ This human, organic quality is preserved in the custom typography of the logotyp
   },
   {
     title: "Vestige, 2025",
-    cover: "assets/covers/vestige.png",
+    cover: "assets/covers/vestige_cover_d.png",
     tablet: 2,
     lineHeight: 1.1,
     info: "Vestige.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
