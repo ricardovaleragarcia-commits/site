@@ -41,7 +41,7 @@ p { margin: 0; }
   cursor: pointer;
 }
 
-.intro a:hover { color: #ff1c91; }
+.intro a:hover { color: #808080; }
 
 /* ---------- Rejilla ---------- */
 .gallery {
