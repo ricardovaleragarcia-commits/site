@@ -44,15 +44,14 @@ Designed as an open-access archive operating under a museographic framework, the
 
 The project carries immense emotional weight and humanity, born out of personal experience: losing my father triggered the imperative need for this exploration, as every future I once envisioned with him was permanently severed. Vestige mandates that each cataloged item be accompanied by a narrative explaining its context and the failed future behind it. This deliberate act of writing is essential to understanding grief, processing how these lost trajectories shape our present identity, and normalizing their weight, transforming individual loss into an act of resilience, collective memory, and shared space. The project is currently being developed as an open-access platform for public participation.`,
     items: [
-      ["Identity and Taxonomy", "GakNCsNe8ACKxiuuWUBPS1Gro.png"],
-      ["Platform (Currently in Development)", "GTMSa4Z2aRL5l5D2i85ObKNeMQ.png"],
-      ["Archive's Vestige Code System", "V0L1BxKh4dI5yfIq3GNOTAMNHI.png"],
-      ["New Vestige Window (Currently in Development)", "E8OOBX6PwRUDu69IhaFRYOc6k.png"],
-      ["Statement", "4Rr9XTomCisp9SVXNI07MbXPPPo.png"],
-      ["Print Media", "FFuY1bKN0eCd2ccsDWu5tsZb4KI.png"],
-      ["Manifesto", "mFBErPy0L1zNsWpqvHQmElDy4.png"],
-      ["Monogram", "53utslpO7dzeK5PhfmDFDxUtyU.png"],
-      ["Description", "2eJVwplYryOW6KB1r9oaJ3RgCA.png"]
+      ["Identity and Taxonomy", "vestige_1"],
+      ["Platform (Currently in Development)", "vestige_2.png"],
+      ["Archive's Code System", "vestige_3.png"],
+      ["Statement", "vestige_4"],
+      ["Monogram", "vestige_5.png"],
+      ["Site Title", "vestige_6"],
+      ["Print Media", "vestige_7"],
+      ["Platform Test", "vestige_8.mp4"]
     ]
   },
   {
