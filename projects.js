@@ -44,13 +44,13 @@ Designed as an open-access archive operating under a museographic framework, the
 
 The project carries immense emotional weight and humanity, born out of personal experience: losing my father triggered the imperative need for this exploration, as every future I once envisioned with him was permanently severed. Vestige mandates that each cataloged item be accompanied by a narrative explaining its context and the failed future behind it. This deliberate act of writing is essential to understanding grief, processing how these lost trajectories shape our present identity, and normalizing their weight, transforming individual loss into an act of resilience, collective memory, and shared space. The project is currently being developed as an open-access platform for public participation.`,
     items: [
-      ["Identity and Taxonomy", "vestige_1"],
+      ["Identity and Taxonomy", "vestige_1.png"],
       ["Platform (Currently in Development)", "vestige_2.png"],
       ["Archive's Code System", "vestige_3.png"],
-      ["Statement", "vestige_4"],
+      ["Statement", "vestige_4.png"],
       ["Monogram", "vestige_5.png"],
-      ["Site Title", "vestige_6"],
-      ["Print Media", "vestige_7"],
+      ["Site Title", "vestige_6.png"],
+      ["Print Media", "vestige_7.png"],
       ["Platform Test", "vestige_8.mp4"]
     ]
   },
