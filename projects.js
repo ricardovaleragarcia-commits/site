@@ -37,7 +37,7 @@ This human, organic quality is preserved in the custom typography of the logotyp
     cover: "assets/covers/vestige_cover_d.png",
     tablet: 2,
     lineHeight: 1.1,
-    info: "VSTG.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
+    info: "VSTG.\nCreative and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
     desc: `Originating in 2025 and remaining in continuous development, VSTG is a digital platform and public archive dedicated to indexing the vestiges of futures that never came to pass—what I define as “failed futures.” Reclaiming and resignifying failure requires directly confronting it, which begins by naming it. These cataloged vestiges span individual, societal, and historical scale: projections once firmly planted in the mind of a person or an entire civilization that, had they materialized, would have radically altered our present or reshaped past horizons. By examining what was intended versus what actually unfolded, the project explores how these unfulfilled trajectories actively branch into new historical directions and define our current reality.
 
 Designed as an open-access archive operating under a museographic framework, the interface presents its content through an intentional initial blur, evoking an experience of discovery and mystery until hovering over a record reveals its visual representation. Beyond the visual artifact, VSTG mandates that every cataloged item be paired with a narrative explaining its specific context and the failed future behind it. This deliberate act of writing is central to the archival practice, bridging abstract historical speculation with tangible human experience.
