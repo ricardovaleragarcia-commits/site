@@ -33,16 +33,18 @@ This human, organic quality is preserved in the custom typography of the logotyp
     ]
   },
   {
-    title: "Vestige, 2025",
+    title: "VSTG, 2025",
     cover: "assets/covers/vestige_cover_d.png",
     tablet: 2,
     lineHeight: 1.1,
-    info: "Vestige.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
-    desc: `Vestige originated in 2025 and remains in active development, evolving continuously to find its most precise form of expression. It is a digital platform and public archive dedicated to indexing the remnants of futures that never came to pass, what I define as 'failed futures.' Reclaiming and resignifying the concept of failure requires directly confronting it, and confronting it begins by giving it a name.
+    info: "VSTG.\nCreative Direction and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
+    desc: `Originating in 2025 and remaining in continuous development, VSTG is a digital platform and public archive dedicated to indexing the vestiges of futures that never came to pass—what I define as “failed futures.” Reclaiming and resignifying failure requires directly confronting it, which begins by naming it. These cataloged vestiges span individual, societal, and historical scale: projections once firmly planted in the mind of a person or an entire civilization that, had they materialized, would have radically altered our present or reshaped past horizons. By examining what was intended versus what actually unfolded, the project explores how these unfulfilled trajectories actively branch into new historical directions and define our current reality.
 
-Designed as an open-access archive operating under a museographic framework, the platform frames user contributions as curated artworks. On the home interface, the collective gallery, entries are initially presented under an intentional blur to evoke an experience of discovery and mystery. Hovering over a record reveals the visual or textual artifact, provided the contributor has set its media visibility to public. Users can submit their vestiges freely or via anonymous profiles, retaining total control over whether their uploaded image or document remains hidden or exposed, while the essential narrative inputs, the explanation of the trace and the account of the failed future, remain accessible to illuminate the record.
+Designed as an open-access archive operating under a museographic framework, the interface presents its content through an intentional initial blur, evoking an experience of discovery and mystery until hovering over a record reveals its visual representation. Beyond the visual artifact, VSTG mandates that every cataloged item be paired with a narrative explaining its specific context and the failed future behind it. This deliberate act of writing is central to the archival practice, bridging abstract historical speculation with tangible human experience.
 
-The project carries immense emotional weight and humanity, born out of personal experience: losing my father triggered the imperative need for this exploration, as every future I once envisioned with him was permanently severed. Vestige mandates that each cataloged item be accompanied by a narrative explaining its context and the failed future behind it. This deliberate act of writing is essential to understanding grief, processing how these lost trajectories shape our present identity, and normalizing their weight, transforming individual loss into an act of resilience, collective memory, and shared space. The project is currently being developed as an open-access platform for public participation.`,
+Born out of a personal experience of grief that permanently severed a once-envisioned trajectory, the project carries immense emotional weight and humanity. Documenting these lost paths becomes an essential process for understanding how missing futures shape who we are today, normalizing their weight and transforming loss into resilience, collective memory, and shared space.
+
+VSTG is currently being developed as an open-access platform built for public participation.`,
     items: [
       ["Identity and Taxonomy", "vestige_1.png"],
       ["Platform (Currently in Development)", "vestige_2.png"],
