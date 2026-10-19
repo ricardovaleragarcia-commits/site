@@ -42,9 +42,7 @@ This human, organic quality is preserved in the custom typography of the logotyp
 
 Designed as an open-access archive operating under a museographic framework, the interface presents its content through an intentional initial blur, evoking an experience of discovery and mystery until hovering over a record reveals its visual representation. Beyond the visual artifact, VSTG mandates that every cataloged item be paired with a narrative explaining its specific context and the failed future behind it. This deliberate act of writing is central to the archival practice, bridging abstract historical speculation with tangible human experience.
 
-Born out of a personal experience of grief that permanently severed a once-envisioned trajectory, the project carries immense emotional weight and humanity. Documenting these lost paths becomes an essential process for understanding how missing futures shape who we are today, normalizing their weight and transforming loss into resilience, collective memory, and shared space.
-
-VSTG is currently being developed as an open-access platform built for public participation.`,
+Born out of a personal experience of grief that permanently severed a once-envisioned trajectory, the project carries immense emotional weight and humanity. Documenting these lost paths becomes an essential process for understanding how missing futures shape who we are today, normalizing their weight and transforming loss into resilience, collective memory, and shared space.`,
     items: [
       ["Identity and Taxonomy", "vestige_1.png"],
       ["Platform (Currently in Development)", "vestige_2.png"],
