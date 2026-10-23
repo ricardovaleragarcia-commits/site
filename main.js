@@ -312,7 +312,7 @@
   var ABOUT = {
     name: "Ricardo Jesús Valera García",
     bio: [
-      "Ricardo is an Art Director and Brand Designer specializing in strategic branding, editorial, and multimedia design. He builds emotion-led visual systems that turn complex narrative ideas into precise, memorable identities.",
+      "As an Art Director and Brand Designer, I specialize in strategic branding, editorial, and multimedia design. I build emotion-led visual systems that turn complex narrative ideas into precise, memorable identities.",
       "I'm based in Barcelona and always happy to hear about new projects. If you'd like to work together, get in touch. I'd love to collaborate with great people on ambitious ideas, wherever you are."
     ],
     services: "Creative Direction, Art Direction, Visual Design, Brand Identity, Graphic Design, Editorial Design",
