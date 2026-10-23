@@ -312,8 +312,8 @@
   var ABOUT = {
     name: "Ricardo Jesús Valera García",
     bio: [
-      "Ricardo is an Art Director and Brand Designer specializing in strategic branding, editorial, and multimedia design. He creates emotion-led visual systems that turn complex narrative concepts into precise, memorable identities.",
-      "Please for any project contact me, im based in Barcelona and i would love to work with amazing people and pretty cool projects from around or any place in the world!"
+      "Ricardo is an Art Director and Brand Designer specializing in strategic branding, editorial, and multimedia design. He builds emotion-led visual systems that turn complex narrative ideas into precise, memorable identities.",
+      "I'm based in Barcelona and always happy to hear about new projects. If you'd like to work together, get in touch. I'd love to collaborate with great people on ambitious ideas, wherever you are."
     ],
     services: "Creative Direction, Art Direction, Visual Design, Brand Identity, Graphic Design, Editorial Design",
     contact: [
@@ -325,7 +325,7 @@
     ],
     personal: [
       { label: "VSTG", href: "https://ricardovaleragarcia-commits.github.io/vstg/" },
-      { label: "Creative–Tools", href: "https://ricardovaleragarcia-commits.github.io/creative_tools/tools/disc-viewer/" }
+      { label: "Creative–Tools", href: "https://ricardovaleragarcia-commits.github.io/creative_tools/" }
     ],
     experience: "Basora Studio, Soul Arts Productions, Grupo Alternativa Publicitaria, Innovación Corporativa 21, San Ignacio de Loyola University",
     foot: ["This website was designed and developed by me.", "© All rights reserved."]
