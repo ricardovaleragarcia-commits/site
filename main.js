@@ -307,4 +307,163 @@
       });
     });
   }
+
+  /* ---------- Panel "about" (clic en el nombre) ---------- */
+  var ABOUT = {
+    name: "Ricardo Jesús Valera García",
+    bio: [
+      "Ricardo is an Art Director and Brand Designer specializing in strategic branding, editorial, and multimedia design. He creates emotion-led visual systems that turn complex narrative concepts into precise, memorable identities.",
+      "Please for any project contact me, im based in Barcelona and i would love to work with amazing people and pretty cool projects from around or any place in the world!"
+    ],
+    services: "Creative Direction, Art Direction, Visual Design, Brand Identity, Graphic Design, Editorial Design",
+    contact: [
+      { label: "(+34) 627791168", href: "tel:+34627791168" },
+      { label: "E-mail", href: "mailto:ricardo.valera.garcia@gmail.com" },
+      { label: "Are.na", href: "https://www.are.na/ricardo-valera-garcia" },
+      { label: "Instagram", href: "https://www.instagram.com/ricardovaleragarcia/" },
+      { label: "LinkedIn", href: "https://linkedin.com/in/rvaleragarcia" }
+    ],
+    personal: [
+      { label: "VSTG", href: "https://ricardovaleragarcia-commits.github.io/vstg/" },
+      { label: "Creative–Tools", href: "https://ricardovaleragarcia-commits.github.io/creative_tools/tools/disc-viewer/" }
+    ],
+    experience: "Basora Studio, Soul Arts Productions, Grupo Alternativa Publicitaria, Innovación Corporativa 21, San Ignacio de Loyola University",
+    foot: ["This website was designed and developed by me.", "© All rights reserved."]
+  };
+
+  /* Bloque "Título:" + líneas (cada línea puede ser un enlace) */
+  function aboutBlock(cls, title, lines) {
+    var b = el("div", "about-block " + cls);
+    b.appendChild(el("div", null, title));
+    var wrap = el("div", "about-text");
+    lines.forEach(function (ln) {
+      if (typeof ln === "string") {
+        wrap.appendChild(el("div", null, ln));
+        return;
+      }
+      var row = el("div");
+      var a = el("a", null, ln.label);
+      a.href = ln.href;
+      if (/^https?:/i.test(ln.href)) {
+        a.target = "_blank";
+        a.rel = "noopener";
+      }
+      row.appendChild(a);
+      wrap.appendChild(row);
+    });
+    b.appendChild(wrap);
+    return b;
+  }
+
+  function openAbout() {
+    if (openModal) return;
+
+    var mobile = mqMobile.matches;
+
+    var root = el("div", "modal");
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-modal", "true");
+    root.setAttribute("aria-label", ABOUT.name);
+
+    var backdrop = el("div", "backdrop");
+    var sheet = el("div", "sheet about" + (mobile ? " is-mobile" : ""));
+    sheet.style.lineHeight = "1.1";
+
+    var closeRow = el("div", "close-row");
+    var closeBtn = el("span", "close", "Close");
+    closeRow.appendChild(closeBtn);
+    sheet.appendChild(closeRow);
+
+    var body = el("div", "about-body" + (mobile ? " is-mobile" : ""));
+
+    var bio = el("div", "about-bio");
+    ABOUT.bio.forEach(function (t) { bio.appendChild(el("p", null, t)); });
+
+    var services = aboutBlock("about-services", "Services:", [ABOUT.services]);
+    var experience = aboutBlock("about-experience", "Experience:", [ABOUT.experience]);
+
+    var contact = el("div", "about-contact");
+    contact.appendChild(aboutBlock("", "Contact:", ABOUT.contact));
+    contact.appendChild(aboutBlock("", "Personal Projects:", ABOUT.personal));
+
+    var foot = el("div", "about-foot");
+    ABOUT.foot.forEach(function (t) { foot.appendChild(el("div", null, t)); });
+
+    if (mobile) {
+      body.appendChild(el("div", "about-name", ABOUT.name));
+      body.appendChild(bio);
+      body.appendChild(services);
+      body.appendChild(contact);
+      body.appendChild(experience);
+      body.appendChild(foot);
+    } else {
+      var top = el("div", "about-top");
+      var name = el("div", "about-name");
+      name.appendChild(el("span", null, ABOUT.name));
+      var arrow = el("span", "about-arrow", "→");
+      arrow.setAttribute("aria-hidden", "true");
+      name.appendChild(arrow);
+      top.appendChild(name);
+      top.appendChild(bio);
+      body.appendChild(top);
+
+      var cols = el("div", "about-cols");
+      var inner = el("div", "about-cols-inner");
+      inner.appendChild(services);
+      inner.appendChild(contact);
+      inner.appendChild(experience);
+      cols.appendChild(inner);
+      body.appendChild(cols);
+
+      body.appendChild(foot);
+    }
+
+    sheet.appendChild(body);
+
+    var closing = false;
+    function close() {
+      if (closing) return;
+      closing = true;
+      document.removeEventListener("keydown", onKey);
+      sheet.classList.remove("in");
+      var done = false;
+      function remove() {
+        if (done) return;
+        done = true;
+        root.remove();
+        openModal = null;
+      }
+      sheet.addEventListener("transitionend", function (e) {
+        if (e.target === sheet && e.propertyName === "transform") remove();
+      });
+      setTimeout(remove, 700);
+    }
+
+    function onKey(e) {
+      if (e.key === "Escape") close();
+    }
+
+    backdrop.addEventListener("click", close);
+    closeBtn.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+
+    root.appendChild(backdrop);
+    root.appendChild(sheet);
+    document.body.appendChild(root);
+    openModal = { root: root };
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        sheet.classList.add("in");
+      });
+    });
+  }
+
+  var aboutLink = document.getElementById("about-link");
+  if (aboutLink) {
+    aboutLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      openAbout();
+    });
+  }
 })();

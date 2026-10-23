@@ -265,6 +265,96 @@ p { margin: 0; }
 .m-items .media { pointer-events: auto; }
 .m-caption { margin-top: 8px; }
 
+/* ---------- Panel "about" (clic en el nombre) ----------
+   Reutiliza la ventana inferior (.modal / .sheet) y la misma rejilla
+   15fr 51fr 34fr de los proyectos, así todo queda alineado con ellos. */
+.sheet.about { height: 83vh; }
+
+.sheet.about.is-mobile {
+  height: auto;
+  max-height: 85vh;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.about a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about a:hover { color: #808080; }
+
+/* Escritorio: fila superior (nombre / texto) */
+.about-top {
+  display: grid;
+  grid-template-columns: 15fr 51fr 34fr;
+  gap: 15px;
+  width: 100%;
+}
+
+.about-name {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.about-name .about-arrow { flex-shrink: 0; }
+
+.about-bio { max-width: 29em; }
+.about-bio p + p { margin-top: 1.1em; }
+
+/* Escritorio: fila de Services / Contact / Experience.
+   Services empieza donde empiezan los textos de los proyectos y
+   Experience donde empieza la tercera columna; Contact queda a
+   igual distancia entre los dos (justify-content: space-between). */
+.about-cols {
+  display: grid;
+  grid-template-columns: 15fr 51fr 34fr;
+  gap: 15px;
+  width: 100%;
+  margin-top: 4em;
+}
+
+.about-cols-inner {
+  grid-column: 2 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-services   { flex: 0 0 calc((100% - 15px) * 15 / 85); }
+.about-experience { flex: 0 0 calc((100% - 15px) * 34 / 85); }
+.about-experience .about-text { max-width: 23em; }
+.about-contact    { flex: 0 0 auto; }
+
+.about-contact .about-block + .about-block { margin-top: 3.3em; }
+
+.about-foot {
+  margin-top: auto;
+  padding-top: 4em;
+}
+
+/* Móvil: todo en una columna */
+.about-body.is-mobile {
+  gap: 2em;
+  padding-bottom: 40px;
+}
+
+.about-body.is-mobile .about-services,
+.about-body.is-mobile .about-experience,
+.about-body.is-mobile .about-contact { flex: 0 0 auto; }
+
+.about-body.is-mobile .about-bio { max-width: none; }
+.about-body.is-mobile .about-foot { margin-top: 0; padding-top: 0; }
+
 @media (prefers-reduced-motion: reduce) {
   .sheet { transition-duration: 0.01s; }
 }
