@@ -397,23 +397,20 @@
       body.appendChild(experience);
       body.appendChild(foot);
     } else {
-      var top = el("div", "about-top");
+      /* Una sola rejilla (ver style.css): nombre y texto arriba;
+         Services, Contact y Experience debajo */
+      var main = el("div", "about-main");
       var name = el("div", "about-name");
       name.appendChild(el("span", null, ABOUT.name));
       var arrow = el("span", "about-arrow", "→");
       arrow.setAttribute("aria-hidden", "true");
       name.appendChild(arrow);
-      top.appendChild(name);
-      top.appendChild(bio);
-      body.appendChild(top);
-
-      var cols = el("div", "about-cols");
-      var inner = el("div", "about-cols-inner");
-      inner.appendChild(services);
-      inner.appendChild(contact);
-      inner.appendChild(experience);
-      cols.appendChild(inner);
-      body.appendChild(cols);
+      main.appendChild(name);
+      main.appendChild(bio);
+      main.appendChild(services);
+      main.appendChild(contact);
+      main.appendChild(experience);
+      body.appendChild(main);
 
       body.appendChild(foot);
     }
