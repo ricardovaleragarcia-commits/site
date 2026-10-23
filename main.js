@@ -468,7 +468,8 @@
   }
 
   /* ---------- Animación de entrada ----------
-     Primero el texto central (línea por línea) y luego las portadas por bloques.
+     Primero el texto central (todo el bloque a la vez, con un fundido) y, tras una
+     pausa sobre el fondo blanco, las portadas por bloques.
      El orden de las portadas es fijo (parece aleatorio, pero siempre es el mismo);
      en una sola columna (móvil) va de arriba hacia abajo. Lo que queda bajo el
      pliegue aparece al hacer scroll. */
@@ -477,9 +478,10 @@
     if (!root.classList.contains("intro-anim")) return;
     window.__introOK = true;
 
-    var TEXT_START = 150;      // ms hasta la primera línea de texto
-    var TEXT_STEP = 350;       // ms entre líneas del texto central
-    var PROJECTS_START = 900;  // ms hasta el primer bloque
+    var TEXT_START = 150;      // ms hasta que aparece el bloque de texto central (entero, de golpe)
+    var TEXT_HOLD = 500;       // ms que el texto se queda solo sobre el fondo blanco
+    var FADE = 900;            // ms de duración del fundido (igual que en el CSS)
+    var PROJECTS_START = TEXT_START + FADE + TEXT_HOLD;  // ms hasta el primer bloque
     var STEP = 110;            // ms entre bloques
     var MAX_WAIT = 1500;       // espera máxima a que cargue la imagen de un bloque
 
@@ -504,10 +506,10 @@
       });
     }
 
-    /* Texto central */
-    Array.prototype.forEach.call(document.querySelectorAll(".intro p"), function (p, i) {
-      setTimeout(function () { show(p); }, TEXT_START + i * TEXT_STEP);
-    });
+    /* Texto central: todo el bloque a la vez */
+    setTimeout(function () {
+      Array.prototype.forEach.call(document.querySelectorAll(".intro p"), show);
+    }, TEXT_START);
 
     /* Portadas: posición visual de cada una */
     var vh = window.innerHeight;
