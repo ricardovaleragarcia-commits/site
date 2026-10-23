@@ -466,4 +466,100 @@
       openAbout();
     });
   }
+
+  /* ---------- Animación de entrada ----------
+     Primero el texto central (línea por línea) y luego las portadas por bloques.
+     El orden de las portadas es fijo (parece aleatorio, pero siempre es el mismo);
+     en una sola columna (móvil) va de arriba hacia abajo. Lo que queda bajo el
+     pliegue aparece al hacer scroll. */
+  (function () {
+    var root = document.documentElement;
+    if (!root.classList.contains("intro-anim")) return;
+    window.__introOK = true;
+
+    var TEXT_START = 150;      // ms hasta la primera línea de texto
+    var TEXT_STEP = 350;       // ms entre líneas del texto central
+    var PROJECTS_START = 900;  // ms hasta el primer bloque
+    var STEP = 110;            // ms entre bloques
+    var MAX_WAIT = 1500;       // espera máxima a que cargue la imagen de un bloque
+
+    /* Orden fijo sobre la posición visual en la rejilla (0 = primera fila, columna
+       izquierda; 1 = primera fila, centro; 5 = segunda fila, tercera columna...) */
+    var PATTERN = [0, 5, 2, 3, 1, 4, 8, 6, 7, 11, 9, 10];
+
+    function prio(rank) {
+      var i = PATTERN.indexOf(rank);
+      return i < 0 ? 100 + rank : i;
+    }
+
+    function show(node) { node.classList.add("show"); }
+
+    /* Espera a que la imagen cargue (o al tiempo máximo) para no enseñar cuadros vacíos */
+    function ready(img, wait) {
+      return new Promise(function (resolve) {
+        if (!img || (img.complete && img.naturalWidth)) return resolve();
+        img.addEventListener("load", resolve, { once: true });
+        img.addEventListener("error", resolve, { once: true });
+        setTimeout(resolve, wait);
+      });
+    }
+
+    /* Texto central */
+    Array.prototype.forEach.call(document.querySelectorAll(".intro p"), function (p, i) {
+      setTimeout(function () { show(p); }, TEXT_START + i * TEXT_STEP);
+    });
+
+    /* Portadas: posición visual de cada una */
+    var vh = window.innerHeight;
+    var info = Array.prototype.map.call(document.querySelectorAll(".project"), function (node) {
+      var r = node.getBoundingClientRect();
+      return {
+        node: node,
+        img: node.querySelector("img"),
+        top: r.top + window.scrollY,
+        left: r.left,
+        visible: r.top < vh * 0.92
+      };
+    });
+
+    var ranked = info.slice().sort(function (a, b) {
+      return (Math.round(a.top / 4) - Math.round(b.top / 4)) || (a.left - b.left);
+    });
+    ranked.forEach(function (o, i) { o.rank = i; });
+
+    var lefts = {};
+    info.forEach(function (o) { lefts[Math.round(o.left)] = true; });
+    var columns = Object.keys(lefts).length;
+
+    /* Las que se ven al abrir: en secuencia (orden fijo; de arriba abajo si hay 1 columna) */
+    var first = ranked.filter(function (o) { return o.visible; });
+    if (columns > 1) first.sort(function (a, b) { return prio(a.rank) - prio(b.rank); });
+
+    first.forEach(function (o, k) {
+      setTimeout(function () {
+        ready(o.img, MAX_WAIT).then(function () { show(o.node); });
+      }, PROJECTS_START + k * STEP);
+    });
+
+    /* Las de más abajo: aparecen al llegar a ellas con el scroll */
+    var rest = ranked.filter(function (o) { return !o.visible; });
+    if (!("IntersectionObserver" in window)) {
+      rest.forEach(function (o) { show(o.node); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      var k = 0;
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        var o = rest.filter(function (x) { return x.node === en.target; })[0];
+        setTimeout(function () {
+          ready(o.img, 800).then(function () { show(o.node); });
+        }, k++ * 90);
+      });
+    }, { threshold: 0.12 });
+
+    rest.forEach(function (o) { io.observe(o.node); });
+  })();
 })();

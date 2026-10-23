@@ -19,6 +19,19 @@
     })();
   </script>
 
+  <script>
+    /* Animación de entrada: esconde lo que va a aparecer antes del primer pintado
+       (salvo con "reducir movimiento"). Si main.js no arranca, a los 4 s se muestra todo. */
+    (function () {
+      var d = document.documentElement;
+      if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      d.classList.add("intro-anim");
+      setTimeout(function () {
+        if (!window.__introOK) d.classList.add("reveal-all");
+      }, 4000);
+    })();
+  </script>
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ricardo Valera García">
   <meta property="og:description" content="Art Director &amp; Brand Designer">
