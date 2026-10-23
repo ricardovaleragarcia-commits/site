@@ -240,6 +240,34 @@
       c3.appendChild(viewer);
       c3.appendChild(meta);
 
+      /* Cursor propio: flecha → (mitad derecha) o ← (mitad izquierda), la misma
+         del panel de info. Solo con ratón y si hay más de una imagen. */
+      var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (fine && n > 1) {
+        var cur = el("span", "viewer-cursor", "→");
+        cur.setAttribute("aria-hidden", "true");
+        c3.appendChild(cur);
+        viewer.classList.add("has-cursor");
+
+        var moveCursor = function (e) {
+          var rc = c3.getBoundingClientRect();
+          var rv = viewer.getBoundingClientRect();
+          cur.style.transform =
+            "translate(" + (e.clientX - rc.left) + "px," + (e.clientY - rc.top) + "px) translate(-50%,-50%)";
+          var arrow = e.clientX - rv.left > rv.width / 2 ? "→" : "←";
+          if (cur.textContent !== arrow) cur.textContent = arrow;
+        };
+
+        viewer.addEventListener("mouseenter", function (e) {
+          moveCursor(e);
+          cur.classList.add("on");
+        });
+        viewer.addEventListener("mousemove", moveCursor);
+        viewer.addEventListener("mouseleave", function () {
+          cur.classList.remove("on");
+        });
+      }
+
       show = function () {
         viewer.textContent = "";
         viewer.appendChild(makeMedia(p.items[idx].media));
