@@ -358,21 +358,15 @@ p { margin: 0; }
 /* ---------- Animación de entrada ----------
    La clase .intro-anim la pone un script de la cabecera (no se pone con
    "reducir movimiento"); main.js va añadiendo .show a cada bloque. */
-html.intro-anim .intro p {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
+html.intro-anim .intro p,
 html.intro-anim .project {
   opacity: 0;
-  transform: translateY(16px);
 }
 
 html.intro-anim .intro p.show,
 html.intro-anim .project.show {
   opacity: 1;
-  transform: none;
-  transition: opacity 0.9s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.9s ease;
 }
 
 /* Salida de emergencia: si el JS no arranca, todo visible */
