@@ -298,6 +298,7 @@
     function close() {
       if (closing) return;
       closing = true;
+      root.classList.add("closing");
       document.removeEventListener("keydown", onKey);
       sheet.classList.remove("in");
       var done = false;
@@ -449,6 +450,7 @@
     function close() {
       if (closing) return;
       closing = true;
+      root.classList.add("closing");
       document.removeEventListener("keydown", onKey);
       sheet.classList.remove("in");
       var done = false;
@@ -588,5 +590,68 @@
     }, { threshold: 0.12 });
 
     rest.forEach(function (o) { io.observe(o.node); });
+  })();
+
+  /* ---------- Scroll suave ----------
+     Suaviza la rueda / trackpad en la página. No toca: el teclado, la barra de
+     scroll, el táctil, los paneles abiertos (scroll nativo) ni "reducir movimiento". */
+  (function () {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    var TAU = 110; // ms: cuanto más alto, más suave (y más lento en frenar)
+    var root = document.documentElement;
+    var target = window.scrollY;
+    var current = window.scrollY;
+    var raf = 0;
+    var last = 0;
+
+    function maxScroll() {
+      return Math.max(0, root.scrollHeight - window.innerHeight);
+    }
+
+    function frame(now) {
+      var dt = Math.min(64, now - last);
+      last = now;
+      current += (target - current) * (1 - Math.exp(-dt / TAU));
+      if (Math.abs(target - current) < 0.3) {
+        current = target;
+        window.scrollTo(0, current);
+        raf = 0;
+        return;
+      }
+      window.scrollTo(0, current);
+      raf = requestAnimationFrame(frame);
+    }
+
+    window.addEventListener("wheel", function (e) {
+      if (e.defaultPrevented || e.ctrlKey || e.metaKey) return; // zoom
+      if (document.querySelector(".modal")) return;             // paneles: scroll nativo
+      var dy = e.deltaY;
+      if (Math.abs(e.deltaX) > Math.abs(dy)) return;            // gesto horizontal
+      var max = maxScroll();
+      if (max <= 0) return;
+      if (e.deltaMode === 1) dy *= 16;
+      else if (e.deltaMode === 2) dy *= window.innerHeight;
+      e.preventDefault();
+      if (!raf) {                       // parado: parte de la posición real
+        current = window.scrollY;
+        target = current;
+      }
+      target = Math.min(max, Math.max(0, target + dy));
+      if (!raf) {
+        last = performance.now();
+        raf = requestAnimationFrame(frame);
+      }
+    }, { passive: false });
+
+    /* Si algo mueve la página por otro lado (teclado, barra de scroll, ancla),
+       soltamos la animación y seguimos desde donde esté. */
+    window.addEventListener("scroll", function () {
+      if (Math.abs(window.scrollY - current) > 3) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+        current = target = window.scrollY;
+      }
+    }, { passive: true });
   })();
 })();

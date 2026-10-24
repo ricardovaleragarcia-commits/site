@@ -137,7 +137,12 @@ p { margin: 0; }
   inset: 0;
   background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: opacity 0.55s ease;
 }
+
+/* Al cerrar, el oscurecimiento se desvanece junto con la bajada del panel
+   (antes desaparecía de golpe al final) */
+.modal.closing .backdrop { opacity: 0; }
 
 .sheet {
   position: relative;
@@ -392,4 +397,5 @@ html.reveal-all .project {
 
 @media (prefers-reduced-motion: reduce) {
   .sheet { transition-duration: 0.01s; }
+  .backdrop { transition-duration: 0.01s; }
 }
