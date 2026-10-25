@@ -67,6 +67,7 @@ Because these releases are designed as high-end collector's editions, the primar
 The second front was the album redesign itself, which preserves the essence of the original release. The color tone of the front cover image was subtly adjusted for distinction, while the back cover scales the original CD tracklist distribution up to the vinyl format. The set includes two records whose labels maintain the main cover’s aesthetic on the front, while their B-sides feature the artist portraits seen on the OBI strip, tying the entire packaging system together into a cohesive object.`,
     items: [
       ["Perennial Series OBI Strip", "mU4Ns6GcyrTtKiuaS5fykhPUto.png"],
+      ["Vinyl", "lpsps20_5.mp4"],
       ["OBI Strip Silver Finish", "WzAc1pBbbggRs4bi7uTYoZCjBg.mp4"],
       ["Open Cover", "yoEuPr5qkW2K91C1HU1uO2W7Q8.png"],
       ["Back Cover", "uQNqHef5knaPkoumU7oN9FoS20.png"],
