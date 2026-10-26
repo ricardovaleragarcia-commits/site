@@ -598,7 +598,7 @@
   (function () {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    var TAU = 150; // ms: cuanto más alto, más suave (y más lento en frenar)
+    var TAU = 180; // ms: cuanto más alto, más suave (y más lento en frenar)
     var root = document.documentElement;
     var target = window.scrollY;
     var current = window.scrollY;
