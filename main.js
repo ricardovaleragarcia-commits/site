@@ -354,7 +354,7 @@
     ],
     personal: [
       { label: "VSTG", href: "https://ricardovaleragarcia-commits.github.io/vstg/" },
-      { label: "Creative–Tools", href: "https://ricardovaleragarcia-commits.github.io/creative_tools/" }
+      { label: "Shake & Settle", href: "https://ricardovaleragarcia-commits.github.io/shakeandsettle/" }
     ],
     experience: "Basora Studio, Soul Arts Productions, Grupo Alternativa Publicitaria, Innovación Corporativa 21, San Ignacio de Loyola University",
     foot: ["This website was designed and developed by me.", "© All rights reserved."]
