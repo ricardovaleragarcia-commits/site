@@ -25,6 +25,7 @@
       node.playsInline = true;
       node.setAttribute("muted", "");
       node.setAttribute("playsinline", "");
+      node.poster = src.replace(/\.mp4$/i, ".poster.webp"); // primer fotograma mientras carga
       node.src = src;
     } else {
       node = new Image();
@@ -95,7 +96,8 @@
   /* Cuando la página ya cargó, baja todo en segundo plano, proyecto a proyecto.
      Con "ahorro de datos" activado solo baja las 2 primeras imágenes de cada uno,
      y en móvil no se precargan los vídeos. */
-  var saveData = !!(navigator.connection && navigator.connection.saveData);
+  var conn = navigator.connection || {};
+  var saveData = !!conn.saveData || /(^|-)(slow-)?2g$|^3g$/.test(conn.effectiveType || "");
 
   window.addEventListener("load", function () {
     var queue = PROJECTS.slice();
@@ -122,6 +124,7 @@
     img.draggable = false;
     img.decoding = "async";
     if (index > 2) img.loading = "lazy";
+    else img.fetchPriority = "high"; // las portadas del primer pliegue, primero
     img.addEventListener("contextmenu", noMenu);
     cover.appendChild(img);
 

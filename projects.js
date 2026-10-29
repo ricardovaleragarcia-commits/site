@@ -9,7 +9,7 @@ var BASE = "assets/media/";
 var PROJECTS = [
   {
     title: "Alba Fingerboards, 2022",
-    cover: "assets/covers/albafingerboards.png",
+    cover: "assets/covers/albafingerboards.webp",
     tablet: 1,
     lineHeight: 1.1,
     info: "Alba Fingerboards.\nCreative Direction and Brand Identity.\nLocation: Lima, Peru.\nYear: 2022.",
@@ -19,22 +19,22 @@ In a world where emotions are often sidelined by haste and detachment, Alba was 
 
 This human, organic quality is preserved in the custom typography of the logotype, interlocked, fragmented, yet distinctly expressive. To translate this core concept into visual metaphors, the brand drew inspiration from historical iconography, reinterpreting Cesare Ripa’s Crepuscolo della Mattina in a female personification. This shift to a feminine figure embodies the dawn (l'alba) as a nurturing, generative force of rebirth, a fitting symbol for Alba’s philosophy of starting anew. This humanity is not limited to the brandmark; the packaging design features a framing structure with the same organic language, built to display the deck as a work of art, a homage to craftsmanship, manual labor, and the devotion put into creating with one's hands.`,
     items: [
-      ["Social Media Asset", "91h2pY8v9yjENs6G1ZKknm5nlhA.gif"],
-      ["Frame Structure (Packaging)", "7uS9Ky4tYCqCZDm4V7JIuZF9MCI.png"],
-      ["Logotype", "I3lWhPEVrMGmQthwYnMZUMPmAo.png"],
-      ["Setups", "TlesBX9jiYNiz2gAnRl5i1bRVX4.png"],
-      ["Packaging", "opKlBRspIKy2CSP9HqR2Ep07nE.png"],
+      ["Social Media Asset", "91h2pY8v9yjENs6G1ZKknm5nlhA.mp4"],
+      ["Frame Structure (Packaging)", "7uS9Ky4tYCqCZDm4V7JIuZF9MCI.webp"],
+      ["Logotype", "I3lWhPEVrMGmQthwYnMZUMPmAo.webp"],
+      ["Setups", "TlesBX9jiYNiz2gAnRl5i1bRVX4.webp"],
+      ["Packaging", "opKlBRspIKy2CSP9HqR2Ep07nE.webp"],
       ["Brand Illustration", "sc1K1xJgR9Fn8f51qeNdVTdgDOM.mp4"],
-      ["Brandmark", "LI7pFc2KEC0hq6U8PMjjar3tbo.png"],
-      ["New Beginning Edition", "fPrTf98WTGAb6RW7CzN3c2sE04.png"],
-      ["Screen Printing Film Positives", "eikDLvMrxPcvPgcmUyAhbk7HRXg.png"],
-      ["Standard Edition", "i2B6ZKoeWWf2T9UTQLffTRdod68.png"],
-      ["Brand Essence", "Vg0ufT2FnkbfM8s1zNLMiVQ2eg.png"]
+      ["Brandmark", "LI7pFc2KEC0hq6U8PMjjar3tbo.webp"],
+      ["New Beginning Edition", "fPrTf98WTGAb6RW7CzN3c2sE04.webp"],
+      ["Screen Printing Film Positives", "eikDLvMrxPcvPgcmUyAhbk7HRXg.webp"],
+      ["Standard Edition", "i2B6ZKoeWWf2T9UTQLffTRdod68.webp"],
+      ["Brand Essence", "Vg0ufT2FnkbfM8s1zNLMiVQ2eg.webp"]
     ]
   },
   {
     title: "VSTG, 2025",
-    cover: "assets/covers/vestige_cover_d.png",
+    cover: "assets/covers/vestige_cover_d.webp",
     tablet: 2,
     lineHeight: 1.1,
     info: "VSTG.\nCreative and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
@@ -44,19 +44,19 @@ Designed as an open-access archive operating under a museographic framework, the
 
 Born out of a personal experience of grief that permanently severed a once-envisioned trajectory, the project carries immense emotional weight and humanity. Documenting these lost paths becomes an essential process for understanding how missing futures shape who we are today, normalizing their weight and transforming loss into resilience, collective memory, and shared space.`,
     items: [
-      ["Identity and Taxonomy", "vestige_1.png"],
-      ["Platform (Currently in Development)", "vestige_2.png"],
-      ["Archive's Code System", "vestige_3.png"],
-      ["Statement", "vestige_4.png"],
-      ["Monogram", "vestige_5.png"],
-      ["Site Title", "vestige_6.png"],
-      ["Print Media", "vestige_7.png"],
+      ["Identity and Taxonomy", "vestige_1.webp"],
+      ["Platform (Currently in Development)", "vestige_2.webp"],
+      ["Archive's Code System", "vestige_3.webp"],
+      ["Statement", "vestige_4.webp"],
+      ["Monogram", "vestige_5.webp"],
+      ["Site Title", "vestige_6.webp"],
+      ["Print Media", "vestige_7.webp"],
       ["Platform Test", "vestige_8.mp4"]
     ]
   },
   {
     title: "Lapsus Records, 2026",
-    cover: "assets/covers/lapsusrecordslpsps20.png",
+    cover: "assets/covers/lapsusrecordslpsps20.webp",
     tablet: 3,
     lineHeight: 1.1,
     info: "Lapsus Records.\nPerennial Series & LPS-PS20.\nGraphic Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
@@ -66,34 +66,34 @@ Because these releases are designed as high-end collector's editions, the primar
 
 The second front was the album redesign itself, which preserves the essence of the original release. The color tone of the front cover image was subtly adjusted for distinction, while the back cover scales the original CD tracklist distribution up to the vinyl format. The set includes two records whose labels maintain the main cover’s aesthetic on the front, while their B-sides feature the artist portraits seen on the OBI strip, tying the entire packaging system together into a cohesive object.`,
     items: [
-      ["Perennial Series OBI Strip", "mU4Ns6GcyrTtKiuaS5fykhPUto.png"],
+      ["Perennial Series OBI Strip", "mU4Ns6GcyrTtKiuaS5fykhPUto.webp"],
       ["Vinyl", "lpsps20_5.mp4"],
       ["OBI Strip Silver Finish", "WzAc1pBbbggRs4bi7uTYoZCjBg.mp4"],
-      ["Open Cover", "yoEuPr5qkW2K91C1HU1uO2W7Q8.png"],
-      ["Back Cover", "uQNqHef5knaPkoumU7oN9FoS20.png"],
-      ["Labels", "pkzzx9LsGfjQ6mm5K5Urph0Hl4.png"]
+      ["Open Cover", "yoEuPr5qkW2K91C1HU1uO2W7Q8.webp"],
+      ["Back Cover", "uQNqHef5knaPkoumU7oN9FoS20.webp"],
+      ["Labels", "pkzzx9LsGfjQ6mm5K5Urph0Hl4.webp"]
     ]
   },
   {
     title: "Hausmann, 2026",
-    cover: "assets/covers/hausmanncatalogue.png",
+    cover: "assets/covers/hausmanncatalogue.webp",
     tablet: 4,
     lineHeight: 1.1,
     info: "Hausmann.\nCatalogue 2026-2027.\nEditorial Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
     desc: `This editorial piece is part of a broader project at Basora, where I was tasked with designing the catalog for the new 2026–2027 collection. The core idea was to create a refined, modern publication, using a horizontal format to highlight grouped families of pieces per section. By displaying the photoshoot imagery at a larger scale, the vertical opening of the spreads creates a striking sense of scale and grandeur.`,
     items: [
-      ["Hausmann", "zQSskLRkWHRCuUAIpFU47wqFB0.png"],
-      ["Introduction", "edQUsQoEqK2Grnd3kWHYuJfr5A.png"],
-      ["Page Layout", "pozQCUJCr2GelNmnsNdPIBNM.png"],
-      ["Pages Layout", "pIVE1tk9sJvUnzyXUIH30iAAs.png"],
-      ["Pages Layout", "Nigkyl9SKzYjEllvFI24g5AFjI.png"],
-      ["Index", "QAs8QZsFrr1S9MxBhgqoDXZakeE.png"],
-      ["Contact Page", "eQYUAKZY3LhQRV8vVcg65Umj00.png"]
+      ["Hausmann", "zQSskLRkWHRCuUAIpFU47wqFB0.webp"],
+      ["Introduction", "edQUsQoEqK2Grnd3kWHYuJfr5A.webp"],
+      ["Page Layout", "pozQCUJCr2GelNmnsNdPIBNM.webp"],
+      ["Pages Layout", "pIVE1tk9sJvUnzyXUIH30iAAs.webp"],
+      ["Pages Layout", "Nigkyl9SKzYjEllvFI24g5AFjI.webp"],
+      ["Index", "QAs8QZsFrr1S9MxBhgqoDXZakeE.webp"],
+      ["Contact Page", "eQYUAKZY3LhQRV8vVcg65Umj00.webp"]
     ]
   },
   {
     title: "Soul Arts Productions, 2025",
-    cover: "assets/covers/soulartsproductionsdecks.png",
+    cover: "assets/covers/soulartsproductionsdecks.webp",
     tablet: 5,
     lineHeight: 1.1,
     info: "Soul Arts Productions.\nPresentation Design and Graphic Design.\nLocation: Mexico (Remote).\nYear: 2025.",
@@ -101,18 +101,18 @@ The second front was the album redesign itself, which preserves the essence of t
 
 These pitch decks were utilized throughout the 2025–2026 season for Soul Arts Productions' projects, ambassador agreements and contracts for principal dancer Isaac Hernández, and sponsorship acquisition for the 2025 'Despertares®' show.`,
     items: [
-      ["Principal Dancer Isaac Hernández – Book", "fk2koKOGiClxrCy3l2KiTsFzMw.png"],
-      ["Principal Dancer Isaac Hernández – Prada Ambassador", "2WSBhbJhicmKChwLg5CdEpAccY.png"],
-      ["Principal Dancer Isaac Hernández – Hugo Boss Ambassador", "8aHxQFxc883dsO8ULZ36u0nweY.png"],
-      ["Principal Dancer Isaac Hernández – Tiffany & Co. Ambassador", "x6Luq3JLg2kzqGKywJ4M0R40z8o.png"],
-      ["Principal Dancer Isaac Hernández – Tiffany & Co.", "DqarWghiIvdvpymd7sTzEvE.png"],
-      ["Principal Dancer Esteban Hernández – Book", "minWX681Y65OssE2YwzVj5T74.png"],
-      ["Principal Dancer Esteban Hernández – Book", "4PpmPAulJYXQTt8YegFpB2y8O0U.png"]
+      ["Principal Dancer Isaac Hernández – Book", "fk2koKOGiClxrCy3l2KiTsFzMw.webp"],
+      ["Principal Dancer Isaac Hernández – Prada Ambassador", "2WSBhbJhicmKChwLg5CdEpAccY.webp"],
+      ["Principal Dancer Isaac Hernández – Hugo Boss Ambassador", "8aHxQFxc883dsO8ULZ36u0nweY.webp"],
+      ["Principal Dancer Isaac Hernández – Tiffany & Co. Ambassador", "x6Luq3JLg2kzqGKywJ4M0R40z8o.webp"],
+      ["Principal Dancer Isaac Hernández – Tiffany & Co.", "DqarWghiIvdvpymd7sTzEvE.webp"],
+      ["Principal Dancer Esteban Hernández – Book", "minWX681Y65OssE2YwzVj5T74.webp"],
+      ["Principal Dancer Esteban Hernández – Book", "4PpmPAulJYXQTt8YegFpB2y8O0U.webp"]
     ]
   },
   {
     title: "Off Script, 2025",
-    cover: "assets/covers/offscript.png",
+    cover: "assets/covers/offscript.webp",
     tablet: 6,
     lineHeight: 1.1,
     info: "Off Script.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
@@ -122,39 +122,39 @@ These themes endure precisely because they remain embedded in the contemporary h
 
 The architecture of typography, how the word is structured, fragmented, and positioned within space, communicates nuances that verbal language alone can only suggest. Here, typographic construction becomes the very act of translation: the physical materialization of the classic word in our present.`,
     items: [
-      ["Collective Identity", "keSFvxbqN1LoPuhuWdR7zLmW3I.png"],
-      ["Romeo & Juliet Poster", "j5g99JgWBgDagoRUE9E7GcU9w.png"],
-      ["Plays", "8rPcaj3kKORJz06RCRpCRINtqBY.png"],
-      ["The Seagull Poster", "ojf2t3V9fpFz6i4MBsOoaEZNJWk.png"],
-      ["Reimagined Concept", "hYGBZXDDtZ7NIqR8yAz8R2NEs.png"],
-      ["Oedipus Rex Poster", "zvCr0HcjOyleFnyflNffo6RU.png"],
-      ["Communication", "4biHeSucyRPgC7PcEazYri76o.png"],
-      ["Classics Reimagined", "OPM6loyWpmGSpOUJE5wGXKqlQi0.png"],
-      ["Titles", "n3wMReR0EX26DvwUdyxnJUYiI.png"],
-      ["Merchandising", "gt0iR5bLmeBWDKaSeVQUOkrUwxU.png"]
+      ["Collective Identity", "keSFvxbqN1LoPuhuWdR7zLmW3I.webp"],
+      ["Romeo & Juliet Poster", "j5g99JgWBgDagoRUE9E7GcU9w.webp"],
+      ["Plays", "8rPcaj3kKORJz06RCRpCRINtqBY.webp"],
+      ["The Seagull Poster", "ojf2t3V9fpFz6i4MBsOoaEZNJWk.webp"],
+      ["Reimagined Concept", "hYGBZXDDtZ7NIqR8yAz8R2NEs.webp"],
+      ["Oedipus Rex Poster", "zvCr0HcjOyleFnyflNffo6RU.webp"],
+      ["Communication", "4biHeSucyRPgC7PcEazYri76o.webp"],
+      ["Classics Reimagined", "OPM6loyWpmGSpOUJE5wGXKqlQi0.webp"],
+      ["Titles", "n3wMReR0EX26DvwUdyxnJUYiI.webp"],
+      ["Merchandising", "gt0iR5bLmeBWDKaSeVQUOkrUwxU.webp"]
     ]
   },
   {
     title: "Despertares, 2025",
-    cover: "assets/covers/despertaresmedia.png",
+    cover: "assets/covers/despertaresmedia.webp",
     tablet: 8,
     lineHeight: 1.1,
     info: "Despertares 2025.\nMultimedia Design.\nLocation: Mexico (Remote).\nYear: 2025.",
     desc: `This section is a small compilation of multimedia assets produced for and around the 2025 edition of the 'Despertares®' show. My involvement spanned from developing a custom photographic treatment for the dancer portraiture used throughout this season, to directing and editing the teaser, official trailer, and promotional video content for broadcast TV, social media, and on-site audiovisual displays at the Auditorio Nacional in Mexico.`,
     items: [
-      ["Photo Edition", "3iI6v3WHp6lbfBDRvf3BxR3thM4.png"],
-      ["Photo Edition", "yDF1VIEaK2YShVfJTgGshcyc.png"],
+      ["Photo Edition", "3iI6v3WHp6lbfBDRvf3BxR3thM4.webp"],
+      ["Photo Edition", "yDF1VIEaK2YShVfJTgGshcyc.webp"],
       ["Multimedia Design", "fh9bdv5yXEbCBxAwsoYaLnf8Fg.mp4"],
       ["Multimedia Design", "NhBBKBp1aX6bJzMLkVAtNusRvIY.mp4"],
       ["Multimedia Design", "VA2rXX3h8JKMwdRtbr0sLMeBLsI.mp4"],
       ["Multimedia Design", "C9qbNNfpb3gCGJehNbgMtgCack.mp4"],
-      ["Photo Edition - Carousel", "fX9ji3VUzsEvfnTqntzpAByyU0.png"],
+      ["Photo Edition - Carousel", "fX9ji3VUzsEvfnTqntzpAByyU0.webp"],
       ["Multimedia Design", "D0etnL20K6hgaP6ZyLNcSB9U.mp4"]
     ]
   },
   {
     title: "The Midnight Hound, 2024",
-    cover: "assets/covers/themidnighthound.png",
+    cover: "assets/covers/themidnighthound.webp",
     tablet: 7,
     lineHeight: 1.1,
     info: "The Midnight Hound.\nArt Direction.\nLocation: Brazil (Remote).\nYear: 2024.",
@@ -162,18 +162,18 @@ The architecture of typography, how the word is structured, fragmented, and posi
 
 To evoke a subtle yet persistent sense of emotional uncertainty, the design relies on a minimalist two-tone chromatic palette engineered to build quiet tension. The accompanying visual assets feature a customized, dramatic serif typeface set against low-detail, heavily processed film photography, preserving the mysterious and restrained essence of the piece.`,
     items: [
-      ["Stamp", "g3pZqtB3Cj7BOAAT0Aavs1Kax8Y.png"],
-      ["Titles", "galpmg2W4f3IdLyhgM1HzdlirfA.png"],
-      ["Credits", "cIlVKEcCTQBI1s1QWM1tRFNT9Y.png"],
-      ["Poster", "dYyoFImCaaYEzzwJbK1RoQA0zg.png"],
-      ["Poster", "M50uMclfawM8GoSXjS7b5CsoI4.png"],
-      ["Asset", "tbF0JCS5TUFDuV1qpMfwCU4c0.png"],
-      ["Synopsis", "Kx2OQwGekvKWNw21LB6t4f2tcqA.png"]
+      ["Stamp", "g3pZqtB3Cj7BOAAT0Aavs1Kax8Y.webp"],
+      ["Titles", "galpmg2W4f3IdLyhgM1HzdlirfA.webp"],
+      ["Credits", "cIlVKEcCTQBI1s1QWM1tRFNT9Y.webp"],
+      ["Poster", "dYyoFImCaaYEzzwJbK1RoQA0zg.webp"],
+      ["Poster", "M50uMclfawM8GoSXjS7b5CsoI4.webp"],
+      ["Asset", "tbF0JCS5TUFDuV1qpMfwCU4c0.webp"],
+      ["Synopsis", "Kx2OQwGekvKWNw21LB6t4f2tcqA.webp"]
     ]
   },
   {
     title: "Parachilna, 2024",
-    cover: "assets/covers/parachilnaasset.png",
+    cover: "assets/covers/parachilnaasset.webp",
     tablet: 9,
     lineHeight: 1.1,
     info: "Parachilna.\nB15 T V GR Reel.\nCreative Direction.\nIn collaboration with Annie Pearlman and Rafaela Barros.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2024.",
@@ -182,13 +182,13 @@ To evoke a subtle yet persistent sense of emotional uncertainty, the design reli
 Designed as a high-end digital asset, the creative direction relies on close-up material explorations and light interplay to elevate the fixture into a sculptural centerpiece. By bridging physical craft with digital expression, the proposal reinforces Parachilna’s human-centric identity, showcasing how raw industrial processes yield timeless refinement.`,
     items: [
       ["3D Animation by Mimitos (@mimitos.online)", "YgUefuHTa1nwnGGd26KawO43Zxk.mp4"],
-      ["Storyboard", "ceXl0DAorlANZLjh0mo2tVzUf0.png"],
-      ["Moodboard", "wGNIrhSabcCPDxzz0Tpj26bZwyk.png"]
+      ["Storyboard", "ceXl0DAorlANZLjh0mo2tVzUf0.webp"],
+      ["Moodboard", "wGNIrhSabcCPDxzz0Tpj26bZwyk.webp"]
     ]
   },
   {
     title: "TV Globo, 2025",
-    cover: "assets/covers/tvglobodiversidade.png",
+    cover: "assets/covers/tvglobodiversidade.webp",
     tablet: 10,
     lineHeight: 1.2,
     info: "TV Globo.\nComitê de Diversidade.\nGraphic Design.\nIn collaboration with Rafaela Barros.\nLocation: Brazil (Remote).\nYear: 2025.",
@@ -197,13 +197,13 @@ Designed as a high-end digital asset, the creative direction relies on close-up 
 Developed in collaboration with Rafaela Barros, each symbol translates complex social themes into abstract graphic iconography, reclaiming and resignifying these core concepts through a shared visual signifier.`,
     items: [
       ["Logo Comitê de Diversidade", "SHHwu1qvf57jJZqpa3Em7wHEgHU.mp4"],
-      ["Symbols", "QRBqcJnuAugrQoFqbN049J15LiA.png"],
-      ["Folders", "cAsXR3sp0y8rXeXdp3pF2paWA.png"]
+      ["Symbols", "QRBqcJnuAugrQoFqbN049J15LiA.webp"],
+      ["Folders", "cAsXR3sp0y8rXeXdp3pF2paWA.webp"]
     ]
   },
   {
     title: "DiskoSlice, 2026",
-    cover: "assets/covers/diskoslice.png",
+    cover: "assets/covers/diskoslice.webp",
     tablet: 12,
     lineHeight: 1.1,
     info: "DiskoSlice.\nBrand Identity.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
@@ -211,22 +211,22 @@ Developed in collaboration with Rafaela Barros, each symbol translates complex s
 
 This is how DiskoSlice was born, a slice-shop that shares core identity elements with Diskoteka while introducing an 80s–90s pop culture aesthetic blended with the triangular anchor. From this fusion, everything takes shape: coasters deviate from standard formats into custom triangular shapes, and the box packaging incorporates iconic culture references, such as Pac-Man whose open mouth forms a pizza slice, the peace sign modified to feature a missing slice, or an Imperial Star Destroyer shaped as a pizza slice. This visual freedom defines the overarching concept behind DiskoSlice: a uniquely distinct pizzeria.`,
     items: [
-      ["Logotype", "C1EV02IqkguibgBx88iaZYUI.png"],
-      ["Cap", "WsaEqPkCn0jxTOfmaoLerbwqNU.png"],
-      ["Badge", "qfgotEBUaWbfmh3d6zWHkmOa8as.png"],
-      ["Coasters A", "hBJEIy7BdsJvgRptk1qK8YlPACM.png"],
-      ["Coasters B", "smKke6wJoLQifHuFC5ooYZhRk4.png"],
-      ["Pizza Box Graphics", "4cJNp8Ul2V6nepz5cGyVWzsBreU.png"],
-      ["Pizza Boxes A", "1tnTG2TTHZH3i0H1AwkvNn1IA.png"],
-      ["Pizza Boxes B", "ZSRrf1swIURLZua8DyLlxsEa2E.png"],
-      ["Information Card", "qN6bbjoqkfZhBblKDx6zrM2R4LU.png"],
-      ["Pizza Cone Head", "Z7MlvAGPIPcVaGQL8kkmoVoE9s.png"],
-      ["T-Shirt", "M7vvImXGPinud5iCiMF6xFKhxA0.png"]
+      ["Logotype", "C1EV02IqkguibgBx88iaZYUI.webp"],
+      ["Cap", "WsaEqPkCn0jxTOfmaoLerbwqNU.webp"],
+      ["Badge", "qfgotEBUaWbfmh3d6zWHkmOa8as.webp"],
+      ["Coasters A", "hBJEIy7BdsJvgRptk1qK8YlPACM.webp"],
+      ["Coasters B", "smKke6wJoLQifHuFC5ooYZhRk4.webp"],
+      ["Pizza Box Graphics", "4cJNp8Ul2V6nepz5cGyVWzsBreU.webp"],
+      ["Pizza Boxes A", "1tnTG2TTHZH3i0H1AwkvNn1IA.webp"],
+      ["Pizza Boxes B", "ZSRrf1swIURLZua8DyLlxsEa2E.webp"],
+      ["Information Card", "qN6bbjoqkfZhBblKDx6zrM2R4LU.webp"],
+      ["Pizza Cone Head", "Z7MlvAGPIPcVaGQL8kkmoVoE9s.webp"],
+      ["T-Shirt", "M7vvImXGPinud5iCiMF6xFKhxA0.webp"]
     ]
   },
   {
     title: "Lapsus Records, 2026",
-    cover: "assets/covers/lapsusrecordslps46.png",
+    cover: "assets/covers/lapsusrecordslps46.webp",
     tablet: 11,
     lineHeight: 1.1,
     info: "Lapsus Records.\nLPS46.\nGraphic Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
@@ -234,12 +234,12 @@ This is how DiskoSlice was born, a slice-shop that shares core identity elements
 
 The project involved extensive visual experimentation. Its strength lay in translating what the artists expressed musically through design, utilizing imagery they provided alongside experimental visuals like the acoustic sand patterns. Ultimately, this exploratory process reshaped my workflow, teaching me how to systematically close design phases and decide on key directions efficiently, without underestimating the value of thorough visual iteration.`,
     items: [
-      ["Phenomena by R-010 & Venerandi", "V5H4716RFCdRUhQDitoC3SiiQ.png"],
-      ["Front and Back Cover", "sIsYdvQojNlmlhpvZxcLu4hSoOQ.png"],
-      ["Vinyl Label", "wT8rA2gs4xyiQIcFstAou5WyUE.png"],
-      ["Graphics", "sccOTF0rFW4mCK24OiSZBlbKVhU.png"],
-      ["Front and Back Vinyl Label", "h1gsivBCYIBYpS92GRDeCJN6wFM.png"],
-      ["Tests", "7WclQOxXNCAnGDIllKBEotAmBk.png"]
+      ["Phenomena by R-010 & Venerandi", "V5H4716RFCdRUhQDitoC3SiiQ.webp"],
+      ["Front and Back Cover", "sIsYdvQojNlmlhpvZxcLu4hSoOQ.webp"],
+      ["Vinyl Label", "wT8rA2gs4xyiQIcFstAou5WyUE.webp"],
+      ["Graphics", "sccOTF0rFW4mCK24OiSZBlbKVhU.webp"],
+      ["Front and Back Vinyl Label", "h1gsivBCYIBYpS92GRDeCJN6wFM.webp"],
+      ["Tests", "7WclQOxXNCAnGDIllKBEotAmBk.webp"]
     ]
   }
 ];
