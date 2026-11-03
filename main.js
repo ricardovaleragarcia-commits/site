@@ -104,6 +104,7 @@
     (function next() {
       var p = queue.shift();
       if (!p) {
+        preloadElsewhere(); // miniaturas de (Elsewhere), después de los proyectos
         if (!saveData && !mqMobile.matches) preloadVideos();
         return;
       }
@@ -495,6 +496,222 @@
       e.preventDefault();
       openAbout();
     });
+  }
+
+  /* ---------- Panel "(Elsewhere)": piezas sueltas, logos y descartes ----------
+     Misma ventana inferior. Rejilla de miniaturas de tamaños distintos; al pulsar
+     una se abre grande, con contador y pie. Los datos están en elsewhere.js. */
+  var EW = typeof ELSEWHERE !== "undefined" ? ELSEWHERE : [];
+  var EW_BASE = typeof ELSEWHERE_BASE !== "undefined" ? ELSEWHERE_BASE : "";
+  var EW_GAP = 15;
+
+  function ewIsVideo(it) { return /\.(mp4|webm)$/i.test(it.file); }
+
+  var ewPreloaded = false;
+  function preloadElsewhere() {
+    if (ewPreloaded || !EW.length) return;
+    ewPreloaded = true;
+    EW.slice(0, saveData ? 12 : EW.length).forEach(function (it) {
+      if (/\.svg$/i.test(it.thumb)) return;
+      preloadImg(EW_BASE + it.thumb);
+    });
+  }
+
+  /* Columnas de la rejilla y columnas que ocupa cada tamaño, según el ancho */
+  function ewColumns() {
+    var w = window.innerWidth;
+    if (w <= 768) return { cols: 4, span: { S: 2, M: 2, L: 4, XL: 4 } };
+    if (w < 1200) return { cols: 8, span: { S: 2, M: 3, L: 4, XL: 8 } };
+    return { cols: 12, span: { S: 2, M: 3, L: 4, XL: 6 } };
+  }
+
+  function openElsewhere() {
+    if (openModal || !EW.length) return;
+
+    var n = EW.length;
+    var idx = -1; // -1 = rejilla; >= 0 = pieza abierta
+
+    var root = el("div", "modal");
+    root.setAttribute("role", "dialog");
+    root.setAttribute("aria-modal", "true");
+    root.setAttribute("aria-label", "Elsewhere");
+
+    var backdrop = el("div", "backdrop");
+    var sheet = el("div", "sheet elsewhere");
+    sheet.style.lineHeight = "1.1";
+
+    var closeRow = el("div", "close-row");
+    var closeBtn = el("span", "close", "Close");
+    closeRow.appendChild(closeBtn);
+    sheet.appendChild(closeRow);
+
+    var body = el("div", "ew-body");
+    var grid = el("div", "ew-grid");
+    var tiles = [];
+
+    EW.forEach(function (it, i) {
+      var tile = el("div", "ew-tile");
+      var box = el("div", "ew-box");
+      var im = new Image();
+      im.src = EW_BASE + it.thumb;
+      im.alt = it.caption || "";
+      im.decoding = "async";
+      im.draggable = false;
+      if (i > 5) im.loading = "lazy";
+      im.addEventListener("contextmenu", noMenu);
+      box.appendChild(im);
+      if (it.caption) box.appendChild(el("div", "ew-cap", it.caption));
+      tile.appendChild(box);
+      tile.addEventListener("click", function () { view(i); });
+      grid.appendChild(tile);
+      tiles.push({ tile: tile, box: box, it: it });
+    });
+    body.appendChild(grid);
+
+    /* Altura de cada pieza según su proporción y las columnas que ocupa:
+       filas de 1 px y "span" de filas = alto (masonry con tamaños mezclados) */
+    function layout() {
+      var c = ewColumns();
+      var gw = grid.clientWidth;
+      if (!gw) return;
+      var colW = (gw - EW_GAP * (c.cols - 1)) / c.cols;
+      grid.style.gridTemplateColumns = "repeat(" + c.cols + ", minmax(0, 1fr))";
+      tiles.forEach(function (t) {
+        var s = Math.min(c.cols, c.span[t.it.size] || c.span.M);
+        var w = colW * s + EW_GAP * (s - 1);
+        var h = Math.round(w * t.it.h / t.it.w);
+        t.tile.style.gridColumn = "span " + s;
+        t.tile.style.gridRow = "span " + (h + EW_GAP);
+        t.box.style.height = h + "px";
+      });
+    }
+
+    /* Visor de una pieza */
+    var viewer = el("div", "ew-view");
+    var stage = el("div", "ew-stage");
+    var meta = el("div", "ew-meta");
+    var counter = el("div", "ew-counter");
+    var cap = el("div", "ew-caption");
+    var back = el("span", "ew-back", "Grid");
+    meta.appendChild(counter);
+    meta.appendChild(cap);
+    meta.appendChild(back);
+    viewer.appendChild(stage);
+    viewer.appendChild(meta);
+
+    var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    var cur = null;
+    if (fine) {
+      cur = el("span", "viewer-cursor", "→");
+      cur.setAttribute("aria-hidden", "true");
+      viewer.appendChild(cur);
+      stage.classList.add("has-cursor");
+      stage.addEventListener("mouseenter", function (e) { moveCur(e); cur.classList.add("on"); });
+      stage.addEventListener("mousemove", moveCur);
+      stage.addEventListener("mouseleave", function () { cur.classList.remove("on"); });
+    }
+    function moveCur(e) {
+      var rv = viewer.getBoundingClientRect();
+      var rs = stage.getBoundingClientRect();
+      cur.style.transform =
+        "translate(" + (e.clientX - rv.left) + "px," + (e.clientY - rv.top) + "px) translate(-50%,-50%)";
+      var arrow = e.clientX - rs.left > rs.width / 2 ? "→" : "←";
+      if (cur.textContent !== arrow) cur.textContent = arrow;
+    }
+
+    stage.addEventListener("click", function (e) {
+      var r = stage.getBoundingClientRect();
+      step(e.clientX - r.left > r.width / 2 ? 1 : -1);
+    });
+    back.addEventListener("click", function () { view(-1); });
+
+    function show() {
+      var it = EW[idx];
+      stage.textContent = "";
+      var m = makeMedia(EW_BASE + it.file);
+      stage.appendChild(m);
+      counter.textContent = idx + 1 + " / " + n;
+      cap.textContent = it.caption || "";
+    }
+
+    function view(i) {
+      idx = i;
+      if (i < 0) {
+        viewer.classList.remove("on");
+        stage.textContent = ""; // para los vídeos
+        return;
+      }
+      show();
+      viewer.classList.add("on");
+    }
+
+    function step(d) {
+      if (idx < 0 || n <= 1) return;
+      idx = (idx + d + n) % n;
+      show();
+    }
+
+    /* El visor va fuera del área con scroll para que siempre cubra la ventana */
+    var wrap = el("div", "ew-wrap");
+    wrap.appendChild(body);
+    wrap.appendChild(viewer);
+    sheet.appendChild(wrap);
+
+    var closing = false;
+    function close() {
+      if (closing) return;
+      closing = true;
+      root.classList.add("closing");
+      document.removeEventListener("keydown", onKey);
+      window.removeEventListener("resize", layout);
+      sheet.classList.remove("in");
+      var done = false;
+      function remove() {
+        if (done) return;
+        done = true;
+        root.remove();
+        openModal = null;
+      }
+      sheet.addEventListener("transitionend", function (e) {
+        if (e.target === sheet && e.propertyName === "transform") remove();
+      });
+      setTimeout(remove, 700);
+    }
+
+    function onKey(e) {
+      if (e.key === "Escape") {
+        if (idx >= 0) view(-1);
+        else close();
+      } else if (e.key === "ArrowRight") step(1);
+      else if (e.key === "ArrowLeft") step(-1);
+    }
+
+    backdrop.addEventListener("click", close);
+    closeBtn.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("resize", layout);
+
+    root.appendChild(backdrop);
+    root.appendChild(sheet);
+    document.body.appendChild(root);
+    openModal = { root: root };
+    layout();
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        sheet.classList.add("in");
+      });
+    });
+  }
+
+  var ewLink = document.getElementById("elsewhere-link");
+  if (ewLink) {
+    ewLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      openElsewhere();
+    });
+    ewLink.addEventListener("mouseenter", preloadElsewhere);
+    ewLink.addEventListener("touchstart", preloadElsewhere, { passive: true });
   }
 
   /* ---------- Animación de entrada ----------
