@@ -13,11 +13,13 @@ var PROJECTS = [
     tablet: 1,
     lineHeight: 1.1,
     info: "Alba Fingerboards.\nCreative Direction and Brand Identity.\nLocation: Lima, Peru.\nYear: 2022.",
-    desc: `Alba Fingerboards is far more than an identity project; for me, it marked a defining turning point in deciding what I wanted to do with my life. It was my first venture into entrepreneurship, my first time stepping into the public eye on social media, and the first time I was creating something I truly loved. Reaching a moment where I could no longer endure the discomfort of who I was and what I was doing, I left everything behind to look into my past for something that once brought me joy. I remembered my passion for fingerboarding and playing with them. That memory gave birth to this independent brand, centered on crafting what I loved while honoring the defining traits of my personality: a commitment to pouring absolute passion and emotional weight into every detail.
+    desc: `Alba began as a way out. After a long time of not finding my place, I looked back for something that once brought me joy and remembered fingerboarding. It became my first venture into entrepreneurship, my first time in the public eye on social media, and the first time I was creating something I truly loved: a turning point in deciding what I wanted to do with my life.
 
-In a world where emotions are often sidelined by haste and detachment, Alba was created to carve out the necessary time to craft, building from pure feeling while delivering exceptional quality where the hours spent are immediately visible. Alba is, and always will be, a brand, but above all, a clear statement. As its name suggests, there is always a new dawn, that first light of day we can witness until the end of life, reminding us that each day offers a chance to experiment, feel, and express something new.
+My focus was to deliver a quality product, from the shape to the concept behind every deck, treating each one as a small piece of art with a message behind every launch. The first launch, New Beginning, was exactly that. The second main launch took its name from resilience, from facing the challenges of building a company day by day.
 
-This human, organic quality is preserved in the custom typography of the logotype, interlocked, fragmented, yet distinctly expressive. To translate this core concept into visual metaphors, the brand drew inspiration from historical iconography, reinterpreting Cesare Ripa’s Crepuscolo della Mattina in a female personification. This shift to a feminine figure embodies the dawn (l'alba) as a nurturing, generative force of rebirth, a fitting symbol for Alba’s philosophy of starting anew. This humanity is not limited to the brandmark; the packaging design features a framing structure with the same organic language, built to display the deck as a work of art, a homage to craftsmanship, manual labor, and the devotion put into creating with one's hands.`,
+That human, organic quality shapes the identity. The logotype is custom, interlocked and fragmented, and the brandmark reinterprets Cesare Ripa’s Crepuscolo della Mattina as a female figure: the dawn (l'alba) as a force of rebirth and, as its name says, a chance to start again each day. The packaging includes a frame that displays the deck as a work of art, a homage to craftsmanship and manual labor.
+
+Two main editions of three screen-printed decks each (two with the logo in two colors, one with an illustration) were followed by standard editions with laser engraving and acrylic paint in silver and gold. In its first year Alba became a recognized name in the global fingerboard community. It is now paused, with no return date.`,
     items: [
       ["Social Media Asset", "91h2pY8v9yjENs6G1ZKknm5nlhA.mp4"],
       ["Frame Structure (Packaging)", "7uS9Ky4tYCqCZDm4V7JIuZF9MCI.webp"],
@@ -38,11 +40,13 @@ This human, organic quality is preserved in the custom typography of the logotyp
     tablet: 2,
     lineHeight: 1.1,
     info: "VSTG.\nCreative and Art Direction.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2025.",
-    desc: `Originating in 2025 and remaining in continuous development, VSTG is a digital platform and public archive dedicated to indexing the vestiges of futures that never came to pass—what I define as “failed futures.” Reclaiming and resignifying failure requires directly confronting it, which begins by naming it. These cataloged vestiges span individual, societal, and historical scale: projections once firmly planted in the mind of a person or an entire civilization that, had they materialized, would have radically altered our present or reshaped past horizons. By examining what was intended versus what actually unfolded, the project explores how these unfulfilled trajectories actively branch into new historical directions and define our current reality.
+    desc: `What happens to the futures that never happened? VSTG is an archive of them: futures imagined, planned or expected that never came to pass, and that still shape individuals, societies and history. I call them “failed futures”, a term that came out of my own research. Reclaiming failure requires confronting it, and that begins by naming it.
 
-Designed as an open-access archive operating under a museographic framework, the interface presents its content through an intentional initial blur, evoking an experience of discovery and mystery until hovering over a record reveals its visual representation. Beyond the visual artifact, VSTG mandates that every cataloged item be paired with a narrative explaining its specific context and the failed future behind it. This deliberate act of writing is central to the archival practice, bridging abstract historical speculation with tangible human experience.
+Originating in 2025 in the Beyond Branding master at Elisava and Folch, the project is in continuous development and has two parts: an editorial piece with no beginning or end, and a digital platform that works as a condensed version of it. Its endless scroll carries the same idea: failure was, is and will be present, and it has to be dignified to find what can be learned from it.
 
-Born out of a personal experience of grief that permanently severed a once-envisioned trajectory, the project carries immense emotional weight and humanity. Documenting these lost paths becomes an essential process for understanding how missing futures shape who we are today, normalizing their weight and transforming loss into resilience, collective memory, and shared space.`,
+The interface works as an open-access archive under a museographic framework. It opens blurred, evoking discovery and mystery, until hovering over a record reveals its image, and every item must come with a narrative explaining its context and the failed future behind it, bridging historical speculation with human experience.
+
+Publication is planned for 2027.`,
     items: [
       ["Identity and Taxonomy", "vestige_1.webp"],
       ["Platform (Currently in Development)", "vestige_2.webp"],
@@ -60,11 +64,11 @@ Born out of a personal experience of grief that permanently severed a once-envis
     tablet: 3,
     lineHeight: 1.1,
     info: "Lapsus Records.\nPerennial Series & LPS-PS20.\nGraphic Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
-    desc: `This project was structured around two main design fronts. The first was developing a new visual system to launch 'The Perennial Series', a new division of Lapsus Records dedicated to timeless electronic music, bringing together previously unreleased vinyl masterings, long-discontinued reissues, and contemporary classics.
+    desc: `The Perennial Series, Lapsus Records’ line dedicated to timeless electronic music (previously unreleased vinyl masterings, long-discontinued reissues and contemporary classics), needed a premium identity that wouldn’t touch the original covers. Until then these editions were printed in a single color on cardboard; the goal was an identity closer to what they are, collector’s pieces. The project was developed under Josep Basora’s creative direction.
 
-Because these releases are designed as high-end collector's editions, the primary goal was to create a protective yet non-intrusive element that preserved the integrity of the original album art. After extensive testing, we settled on implementing a custom OBI Strip. This allowed us to highlight the release as a special Perennial Series edition while keeping the front cover completely unobstructed. The strip relies on an editorial typographic system where both sides convey key information about the series alongside exclusive album and artist details. To ensure a premium finish, each strip features a solid background color derived from the original artwork, paired with crisp silver typography and graphics.
+After extensive testing and many iterations, the answer was a custom OBI strip: a protective, non-intrusive element that marks the release as a Perennial Series edition and keeps the front cover unobstructed. An editorial typographic system carries the series information and exclusive album and artist details, over a solid background color drawn from the original artwork, with crisp silver typography and graphics.
 
-The second front was the album redesign itself, which preserves the essence of the original release. The color tone of the front cover image was subtly adjusted for distinction, while the back cover scales the original CD tracklist distribution up to the vinyl format. The set includes two records whose labels maintain the main cover’s aesthetic on the front, while their B-sides feature the artist portraits seen on the OBI strip, tying the entire packaging system together into a cohesive object.`,
+LPS-PS20, the first release with the new identity, also got an album redesign that preserves the essence of the original: a subtly adjusted cover, a back cover that adapts the original tracklist to the vinyl format, and labels that carry the cover’s aesthetic, with the artist portraits from the strip on the B-sides. The edition is printed and on sale.`,
     items: [
       ["Perennial Series OBI Strip", "mU4Ns6GcyrTtKiuaS5fykhPUto.webp"],
       ["Vinyl", "lpsps20_5.mp4"],
@@ -80,7 +84,9 @@ The second front was the album redesign itself, which preserves the essence of t
     tablet: 4,
     lineHeight: 1.1,
     info: "Hausmann.\nCatalogue 2026-2027.\nEditorial Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
-    desc: `This editorial piece is part of a broader project at Basora, where I was tasked with designing the catalog for the new 2026–2027 collection. The core idea was to create a refined, modern publication, using a horizontal format to highlight grouped families of pieces per section. By displaying the photoshoot imagery at a larger scale, the vertical opening of the spreads creates a striking sense of scale and grandeur.`,
+    desc: `Hausmann makes premium wood furniture, and its 2026–2027 collection needed a catalogue as refined as the pieces. Developed at Basora under Josep Basora’s creative direction, I was in charge of the catalogue focused on the products and its final layout.
+
+The brief was a modern, premium publication that presents each piece with its dimensions and details. The horizontal format lets the photoshoot imagery run large, so each opening gives a single photograph room to stand across two pages. A digital version was also shared.`,
     items: [
       ["Hausmann", "zQSskLRkWHRCuUAIpFU47wqFB0.webp"],
       ["Introduction", "edQUsQoEqK2Grnd3kWHYuJfr5A.webp"],
@@ -97,9 +103,11 @@ The second front was the album redesign itself, which preserves the essence of t
     tablet: 5,
     lineHeight: 1.1,
     info: "Soul Arts Productions.\nPresentation Design and Graphic Design.\nLocation: Mexico (Remote).\nYear: 2025.",
-    desc: `This section compiles presentation design work developed for Soul Arts Productions, the producer behind 'Despertares®', the world’s largest ballet show, and the agency representing principal dancers Isaac Hernández and Esteban Hernández. A graphic system and photographic style were established to seamlessly co-exist with luxury brand identities such as Prada, Tiffany & Co., and other key partners.
+    desc: `Soul Arts Productions is the producer behind 'Despertares®', the world’s largest ballet show, and the agency representing principal dancers Isaac Hernández and Esteban Hernández. It needed to present them, and the show, in the most premium way to investors, partners and brands. I took on the project from the very beginning and designed every deck from start to finish.
 
-These pitch decks were utilized throughout the 2025–2026 season for Soul Arts Productions' projects, ambassador agreements and contracts for principal dancer Isaac Hernández, and sponsorship acquisition for the 2025 'Despertares®' show.`,
+The answer was a modern, elegant visual system that adapts to each brand and each artist, with a photographic treatment adjusted for every deck and style. That flexibility lets the work co-exist seamlessly with luxury brand identities.
+
+The decks were used throughout the 2025–2026 season for the company’s projects, ambassador agreements and contracts for principal dancer Isaac Hernández, and sponsorship acquisition for the 2025 show.`,
     items: [
       ["Principal Dancer Isaac Hernández – Book", "fk2koKOGiClxrCy3l2KiTsFzMw.webp"],
       ["Principal Dancer Isaac Hernández – Prada Ambassador", "2WSBhbJhicmKChwLg5CdEpAccY.webp"],
@@ -116,11 +124,11 @@ These pitch decks were utilized throughout the 2025–2026 season for Soul Arts 
     tablet: 6,
     lineHeight: 1.1,
     info: "Off Script.\nCreative Direction and Art Direction.\nSpeculative Project.\nLocation: Barcelona, Spain.\nYear: 2025.",
-    desc: `This speculative project proposes a contemporary visual reinterpretation of three classic theatrical works, translating their tragic narratives into a modern editorial language and human context. Rejecting literal or staged representations, the proposal positions graphic construction as the primary vehicle of conceptual meaning, where the written word assumes a physical body. The tension between the classic, foundational texts of the Western tradition, and the contemporary, the materiality of type, its scale, fragmentation, and spatial behavior, creates a space for reflection where viewers do not merely interpret the work, but encounter themselves within it.
+    desc: `What does a classic tragedy look like today? Off Script is a speculative answer: an invented collective that stages classic plays in contemporary situations, here through three of them, Romeo and Juliet, The Seagull and Oedipus Rex. I developed its identity and the art and creative direction.
 
-These themes endure precisely because they remain embedded in the contemporary human condition: guilt, loss, and the impossibility of choice. Rather than modernizing these narratives to force relevance, the project recognizes that their resonance is already absolute. The classic essence remains untouched because tragedy was never a matter of form, but of the inevitability of human suffering; what shifts is merely the mirror reflecting it.
+Instead of literal or staged representations, graphic construction carries the meaning, and the written word assumes a physical body. Typography is the unifying element: set in grey, it keeps the feeling of a classic text, while each play takes its own bright background color that places it in the present. Its scale, fragmentation and position in space communicate what verbal language can only suggest.
 
-The architecture of typography, how the word is structured, fragmented, and positioned within space, communicates nuances that verbal language alone can only suggest. Here, typographic construction becomes the very act of translation: the physical materialization of the classic word in our present.`,
+These plays endure because guilt, loss and the impossibility of choice are still ours. The classics stay untouched, because tragedy was never a matter of form but of the inevitability of human suffering; what shifts is only the mirror reflecting it.`,
     items: [
       ["Collective Identity", "keSFvxbqN1LoPuhuWdR7zLmW3I.webp"],
       ["Romeo & Juliet Poster", "j5g99JgWBgDagoRUE9E7GcU9w.webp"],
@@ -140,7 +148,9 @@ The architecture of typography, how the word is structured, fragmented, and posi
     tablet: 8,
     lineHeight: 1.1,
     info: "Despertares 2025.\nMultimedia Design.\nLocation: Mexico (Remote).\nYear: 2025.",
-    desc: `This section is a small compilation of multimedia assets produced for and around the 2025 edition of the 'Despertares®' show. My involvement spanned from developing a custom photographic treatment for the dancer portraiture used throughout this season, to directing and editing the teaser, official trailer, and promotional video content for broadcast TV, social media, and on-site audiovisual displays at the Auditorio Nacional in Mexico.`,
+    desc: `Multimedia content for the 2025 edition of the 'Despertares®' show. The challenge was unity: the raw material came from many places, and I gave all of it one visual treatment, from a custom photographic treatment for the dancer portraits to the teaser and official trailer I created, plus reels, promotional material, and animation of texts and logos.
+
+It ran on TV, on the show’s and the producer’s social media, and on the audiovisual displays inside the Auditorio Nacional in Mexico City.`,
     items: [
       ["Photo Edition", "3iI6v3WHp6lbfBDRvf3BxR3thM4.webp"],
       ["Photo Edition", "yDF1VIEaK2YShVfJTgGshcyc.webp"],
@@ -158,9 +168,9 @@ The architecture of typography, how the word is structured, fragmented, and posi
     tablet: 7,
     lineHeight: 1.1,
     info: "The Midnight Hound.\nArt Direction.\nLocation: Brazil (Remote).\nYear: 2024.",
-    desc: `This project was commissioned to direct the art and visual identity for an auteur psychological horror short film produced in Brazil. The creative direction stems directly from the film's narrative core and the specific emotional atmosphere intended for the audience.
+    desc: `The brief was to show what a film is about without telling it. This project was commissioned to direct the art and visual identity for an auteur psychological horror short film produced in Brazil, working from the film’s concept rather than the literal.
 
-To evoke a subtle yet persistent sense of emotional uncertainty, the design relies on a minimalist two-tone chromatic palette engineered to build quiet tension. The accompanying visual assets feature a customized, dramatic serif typeface set against low-detail, heavily processed film photography, preserving the mysterious and restrained essence of the piece.`,
+To evoke a subtle yet persistent emotional uncertainty, the design relies on a minimalist two-tone palette. The client first imagined warm and cool colors to mark the film’s duality, but that duality ran deeper than a blue and a red could express, so the palette was built to hold quiet tension instead. A customized, dramatic serif, modified to give it a thriller accent while staying elegant and reflecting the story’s mature character, sits against low-detail, heavily processed film photography.`,
     items: [
       ["Stamp", "g3pZqtB3Cj7BOAAT0Aavs1Kax8Y.webp"],
       ["Titles", "galpmg2W4f3IdLyhgM1HzdlirfA.webp"],
@@ -177,9 +187,9 @@ To evoke a subtle yet persistent sense of emotional uncertainty, the design reli
     tablet: 9,
     lineHeight: 1.1,
     info: "Parachilna.\nB15 T V GR Reel.\nCreative Direction.\nIn collaboration with Annie Pearlman and Rafaela Barros.\nLocation: Barcelona, Spain.\nElisava – Beyond Branding.\nYear: 2024.",
-    desc: `Inspired by Parachilna’s industrial roots near Barcelona and its devotion to human craftsmanship, Beauty in Destruction is a 3D digital concept exploring the intersection between raw environments and luxury lighting. The project centers on the B15 table lamp by Jordi Veciana, translating its geometric purity and extruded glass structure into a captivating motion narrative that reveals elegance through elemental textures and light.
+    desc: `Beauty in Destruction shows the B15 table lamp by Jordi Veciana emerging from the destruction that held it, as a piece that endures, has character and is beautiful. It is a 3D digital concept made as the final project of Elisava’s Creative Direction in CGI course, inspired by Parachilna’s industrial roots and its devotion to human craftsmanship.
 
-Designed as a high-end digital asset, the creative direction relies on close-up material explorations and light interplay to elevate the fixture into a sculptural centerpiece. By bridging physical craft with digital expression, the proposal reinforces Parachilna’s human-centric identity, showcasing how raw industrial processes yield timeless refinement.`,
+The direction starts from the material. The lamp’s extruded glass, with its patterns, textures and forms, reflects light in interesting ways, so the piece is built on close-up material explorations and the interplay of light. By bridging physical craft with digital expression, it reinforces Parachilna’s human-centric identity. It was published on Parachilna’s Instagram.`,
     items: [
       ["3D Animation by Mimitos (@mimitos.online)", "YgUefuHTa1nwnGGd26KawO43Zxk.mp4"],
       ["Storyboard", "ceXl0DAorlANZLjh0mo2tVzUf0.webp"],
@@ -192,9 +202,9 @@ Designed as a high-end digital asset, the creative direction relies on close-up 
     tablet: 10,
     lineHeight: 1.2,
     info: "TV Globo.\nComitê de Diversidade.\nGraphic Design.\nIn collaboration with Rafaela Barros.\nLocation: Brazil (Remote).\nYear: 2025.",
-    desc: `This project focused primarily on designing the logotype for TV Globo’s Diversity Committee (Comitê de Diversidade), alongside an institutional visual system and a series of custom symbols representing the committee's key pillars: Black empowerment, feminism, neurodiversity, and broad spectrum diversity.
+    desc: `TV Globo’s Diversity Committee (Comitê de Diversidade) needed an identity that represents diversity in a less expected way. I designed its logotype and a series of custom symbols for the committee’s key pillars (Black empowerment, feminism, neurodiversity, and broad spectrum diversity), supported by an institutional visual system. It is now the committee’s identity.
 
-Developed in collaboration with Rafaela Barros, each symbol translates complex social themes into abstract graphic iconography, reclaiming and resignifying these core concepts through a shared visual signifier.`,
+The logotype stays coherent with TV Globo’s own, with a playful twist that fits an internal committee created to celebrate diversity. In collaboration with Rafaela Barros, the symbols take a conceptual route: drawn from old or related meanings of each theme and abstracted, they read as one family that accompanies the logo.`,
     items: [
       ["Logo Comitê de Diversidade", "SHHwu1qvf57jJZqpa3Em7wHEgHU.mp4"],
       ["Symbols", "QRBqcJnuAugrQoFqbN049J15LiA.webp"],
@@ -207,9 +217,11 @@ Developed in collaboration with Rafaela Barros, each symbol translates complex s
     tablet: 12,
     lineHeight: 1.1,
     info: "DiskoSlice.\nBrand Identity.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
-    desc: `This project stems from Diskoteka Pizza, a Prague-based pizzeria where music plays a central role in the overall dining experience. Looking to expand its services, the brand created a second location focused exclusively on selling pizza slices. Building on this premise, the creative and art direction revolves around the triangle as the anchor element, serving as the foundation to imagine and produce a wide range of applications.
+    desc: `Diskoteka Pizza is a Prague pizzeria where music is part of the dining experience. DiskoSlice was born as part of its ecosystem: a shop focused exclusively on selling pizza slices, with an identity of its own that still shares core elements with Diskoteka.
 
-This is how DiskoSlice was born, a slice-shop that shares core identity elements with Diskoteka while introducing an 80s–90s pop culture aesthetic blended with the triangular anchor. From this fusion, everything takes shape: coasters deviate from standard formats into custom triangular shapes, and the box packaging incorporates iconic culture references, such as Pac-Man whose open mouth forms a pizza slice, the peace sign modified to feature a missing slice, or an Imperial Star Destroyer shaped as a pizza slice. This visual freedom defines the overarching concept behind DiskoSlice: a uniquely distinct pizzeria.`,
+Under Josep Basora’s creative and art direction, everything revolves around the triangle as the anchor element: the foundation to imagine a wide range of applications. An 80s–90s pop culture aesthetic blends with it, so coasters leave standard formats for custom triangular shapes, and the pizza boxes carry iconic references: Pac-Man whose open mouth forms a slice, the peace sign with a missing slice, an Imperial Star Destroyer shaped as a pizza slice.
+
+That visual freedom is the concept behind DiskoSlice, a pizzeria unlike any other.`,
     items: [
       ["Logotype", "C1EV02IqkguibgBx88iaZYUI.webp"],
       ["Cap", "WsaEqPkCn0jxTOfmaoLerbwqNU.webp"],
@@ -230,9 +242,9 @@ This is how DiskoSlice was born, a slice-shop that shares core identity elements
     tablet: 11,
     lineHeight: 1.1,
     info: "Lapsus Records.\nLPS46.\nGraphic Design.\nLocation: Barcelona, Spain.\nDone at Basora Studio.\nYear: 2026.",
-    desc: `The collaborative album Phenomena by artists R-010 and Venerandi was developed directly from the music’s atmosphere and the artists' visual aesthetic. Drawing from Chladni patterns, the shapes generated by sound vibrations in sand, these forms dictated the layout for both sides of the album cover and label. The front cover prioritizes a modern, clean composition, balancing the main artist information and logo alongside the generative form, while the back features a sharper shape defined by a bold, solid white.
+    desc: `Phenomena is the collaborative album by R-010 and Venerandi, developed from the atmosphere of the music and the artists’ visual aesthetic. I was in charge of the design.
 
-The project involved extensive visual experimentation. Its strength lay in translating what the artists expressed musically through design, utilizing imagery they provided alongside experimental visuals like the acoustic sand patterns. Ultimately, this exploratory process reshaped my workflow, teaching me how to systematically close design phases and decide on key directions efficiently, without underestimating the value of thorough visual iteration.`,
+Based on the client’s concept, the design draws on Chladni patterns, the shapes that sound vibrations form in sand. These forms dictated the layout of both sides of the album cover and label: the front prioritizes a modern, clean composition, balancing the main artist information and logo alongside the generative form, while the back features a sharper shape defined by a bold, solid white. The result is a visual translation of what the artists express musically, built through extensive visual exploration.`,
     items: [
       ["Phenomena by R-010 & Venerandi", "V5H4716RFCdRUhQDitoC3SiiQ.webp"],
       ["Front and Back Cover", "sIsYdvQojNlmlhpvZxcLu4hSoOQ.webp"],
