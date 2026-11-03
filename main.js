@@ -517,12 +517,14 @@
     });
   }
 
-  /* Columnas de la rejilla y columnas que ocupa cada tamaño, según el ancho */
-  function ewColumns() {
+  /* Como la rejilla de portadas: 3 columnas (2 en tablet, 1 en móvil). El tamaño de
+     cada pieza es un porcentaje del ancho de su columna y siempre empieza en el borde
+     izquierdo de la columna: una pieza pequeña no la llena. */
+  function ewLayoutInfo() {
     var w = window.innerWidth;
-    if (w <= 768) return { cols: 4, span: { S: 2, M: 2, L: 4, XL: 4 } };
-    if (w < 1200) return { cols: 8, span: { S: 2, M: 3, L: 4, XL: 8 } };
-    return { cols: 12, span: { S: 2, M: 3, L: 4, XL: 6 } };
+    if (w <= 768) return { cols: 1, pct: { S: 0.55, M: 0.8, L: 1, XL: 1 } };
+    if (w < 1200) return { cols: 2, pct: { S: 0.5, M: 0.75, L: 1, XL: 1 } };
+    return { cols: 3, pct: { S: 0.5, M: 0.75, L: 1, XL: 1 } };
   }
 
   function openElsewhere() {
@@ -552,46 +554,57 @@
     EW.forEach(function (it, i) {
       var tile = el("div", "ew-tile");
       var box = el("div", "ew-box");
-      var im = new Image();
-      im.src = EW_BASE + it.thumb;
-      im.alt = it.caption || "";
-      im.decoding = "async";
-      im.draggable = false;
-      if (i > 5) im.loading = "lazy";
-      im.addEventListener("contextmenu", noMenu);
-      box.appendChild(im);
-      tile.appendChild(box);
-      var capEl = null;
-      if (it.caption) {
-        capEl = el("div", "ew-cap", it.caption);
-        tile.appendChild(capEl);
+      box.style.aspectRatio = it.w + " / " + it.h;
+      var node;
+      if (ewIsVideo(it)) {
+        node = makeMedia(EW_BASE + it.file); // en marcha desde que se abre, sin clic
+      } else {
+        node = new Image();
+        node.src = EW_BASE + it.thumb;
+        node.alt = it.caption || "";
+        node.decoding = "async";
+        node.draggable = false;
+        if (i > 5) node.loading = "lazy";
+        node.addEventListener("contextmenu", noMenu);
       }
+      box.appendChild(node);
+      tile.appendChild(box);
+      if (it.caption) tile.appendChild(el("div", "ew-cap", it.caption));
       tile.addEventListener("click", function () { view(i); });
-      grid.appendChild(tile);
-      tiles.push({ tile: tile, box: box, cap: capEl, it: it });
+      tiles.push({ tile: tile, box: box, it: it });
     });
     body.appendChild(grid);
 
-    /* Altura de cada pieza según su proporción y las columnas que ocupa:
-       filas de 1 px y "span" de filas = alto (masonry con tamaños mezclados) */
+    /* Reparte las piezas, en orden, en la columna más corta (altura estimada con la
+       proporción de cada una). Se rehace solo si cambia el número de columnas. */
+    var colCount = 0;
     function layout() {
-      var c = ewColumns();
+      var info = ewLayoutInfo();
       var gw = grid.clientWidth;
       if (!gw) return;
-      var colW = (gw - EW_GAP * (c.cols - 1)) / c.cols;
-      grid.style.gridTemplateColumns = "repeat(" + c.cols + ", minmax(0, 1fr))";
-      /* primero columnas y alto de la imagen; luego, ya con el ancho fijado, se mide
-         el pie (puede ocupar más de una línea) para calcular las filas */
+      var cw = (gw - EW_GAP * (info.cols - 1)) / info.cols;
       tiles.forEach(function (t) {
-        var s = Math.min(c.cols, c.span[t.it.size] || c.span.M);
-        var w = colW * s + EW_GAP * (s - 1);
-        t.h = Math.round(w * t.it.h / t.it.w);
-        t.tile.style.gridColumn = "span " + s;
-        t.box.style.height = t.h + "px";
+        t.box.style.width = Math.round((info.pct[t.it.size] || info.pct.M) * 100) + "%";
       });
+      if (info.cols === colCount) return;
+      colCount = info.cols;
+      grid.textContent = "";
+      var cols = [];
+      var heights = [];
+      for (var k = 0; k < info.cols; k++) {
+        var cEl = el("div", "ew-col");
+        grid.appendChild(cEl);
+        cols.push(cEl);
+        heights.push(0);
+      }
       tiles.forEach(function (t) {
-        var capH = t.cap ? t.cap.offsetHeight : 0;
-        t.tile.style.gridRow = "span " + (t.h + capH + EW_GAP);
+        var s = info.pct[t.it.size] || info.pct.M;
+        var low = 0;
+        for (var k = 1; k < heights.length; k++) if (heights[k] < heights[low]) low = k;
+        cols[low].appendChild(t.tile);
+        heights[low] += cw * s * t.it.h / t.it.w + 30 + EW_GAP;
+        var v = t.box.querySelector("video");
+        if (v) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
       });
     }
 
