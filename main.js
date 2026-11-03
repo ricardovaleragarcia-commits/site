@@ -499,8 +499,10 @@
   }
 
   /* ---------- Panel "(Elsewhere)": piezas sueltas, logos y descartes ----------
-     Misma ventana inferior. Rejilla de miniaturas de tamaños distintos; al pulsar
-     una se abre grande, con contador y pie. Los datos están en elsewhere.js. */
+     Misma ventana inferior. 3 columnas como la rejilla de portadas (2 en tablet, 1 en
+     móvil), cada pieza al ancho de su columna con su pie debajo. Solo se ven: no se
+     abren, no se pueden arrastrar ni guardar con el menú; los vídeos arrancan solos.
+     Los datos están en elsewhere.js. */
   var EW = typeof ELSEWHERE !== "undefined" ? ELSEWHERE : [];
   var EW_BASE = typeof ELSEWHERE_BASE !== "undefined" ? ELSEWHERE_BASE : "";
   var EW_GAP = 15;
@@ -512,26 +514,20 @@
     if (ewPreloaded || !EW.length) return;
     ewPreloaded = true;
     EW.slice(0, saveData ? 12 : EW.length).forEach(function (it) {
-      if (/\.svg$/i.test(it.thumb)) return;
-      preloadImg(EW_BASE + it.thumb);
+      if (!/\.webp$/i.test(it.file)) return;
+      preloadImg(EW_BASE + it.file);
     });
   }
 
-  /* Como la rejilla de portadas: 3 columnas (2 en tablet, 1 en móvil). El tamaño de
-     cada pieza es un porcentaje del ancho de su columna y siempre empieza en el borde
-     izquierdo de la columna: una pieza pequeña no la llena. */
-  function ewLayoutInfo() {
+  function ewColumnCount() {
     var w = window.innerWidth;
-    if (w <= 768) return { cols: 1, pct: { S: 0.55, M: 0.8, L: 1, XL: 1 } };
-    if (w < 1200) return { cols: 2, pct: { S: 0.5, M: 0.75, L: 1, XL: 1 } };
-    return { cols: 3, pct: { S: 0.5, M: 0.75, L: 1, XL: 1 } };
+    if (w <= 768) return 1;
+    if (w < 1200) return 2;
+    return 3;
   }
 
   function openElsewhere() {
     if (openModal || !EW.length) return;
-
-    var n = EW.length;
-    var idx = -1; // -1 = rejilla; >= 0 = pieza abierta
 
     var root = el("div", "modal");
     root.setAttribute("role", "dialog");
@@ -557,127 +553,55 @@
       box.style.aspectRatio = it.w + " / " + it.h;
       var node;
       if (ewIsVideo(it)) {
-        node = makeMedia(EW_BASE + it.file); // en marcha desde que se abre, sin clic
+        node = makeMedia(EW_BASE + it.file); // en marcha desde que se abre
+        node.disablePictureInPicture = true;
+        node.setAttribute("disableremoteplayback", "");
+        node.setAttribute("controlslist", "nodownload noremoteplayback");
       } else {
         node = new Image();
-        node.src = EW_BASE + it.thumb;
+        node.src = EW_BASE + it.file;
         node.alt = it.caption || "";
         node.decoding = "async";
-        node.draggable = false;
         if (i > 5) node.loading = "lazy";
-        node.addEventListener("contextmenu", noMenu);
       }
+      node.draggable = false;
       box.appendChild(node);
       tile.appendChild(box);
       if (it.caption) tile.appendChild(el("div", "ew-cap", it.caption));
-      tile.addEventListener("click", function () { view(i); });
-      tiles.push({ tile: tile, box: box, it: it });
+      tile.addEventListener("contextmenu", noMenu);
+      tile.addEventListener("dragstart", noMenu);
+      tiles.push({ tile: tile, it: it });
     });
     body.appendChild(grid);
+    sheet.appendChild(body);
 
     /* Reparte las piezas, en orden, en la columna más corta (altura estimada con la
        proporción de cada una). Se rehace solo si cambia el número de columnas. */
     var colCount = 0;
     function layout() {
-      var info = ewLayoutInfo();
+      var n = ewColumnCount();
       var gw = grid.clientWidth;
-      if (!gw) return;
-      var cw = (gw - EW_GAP * (info.cols - 1)) / info.cols;
-      tiles.forEach(function (t) {
-        t.box.style.width = Math.round((info.pct[t.it.size] || info.pct.M) * 100) + "%";
-      });
-      if (info.cols === colCount) return;
-      colCount = info.cols;
+      if (!gw || n === colCount) return;
+      colCount = n;
+      var cw = (gw - EW_GAP * (n - 1)) / n;
       grid.textContent = "";
       var cols = [];
       var heights = [];
-      for (var k = 0; k < info.cols; k++) {
+      for (var k = 0; k < n; k++) {
         var cEl = el("div", "ew-col");
         grid.appendChild(cEl);
         cols.push(cEl);
         heights.push(0);
       }
       tiles.forEach(function (t) {
-        var s = info.pct[t.it.size] || info.pct.M;
         var low = 0;
-        for (var k = 1; k < heights.length; k++) if (heights[k] < heights[low]) low = k;
+        for (var k = 1; k < n; k++) if (heights[k] < heights[low]) low = k;
         cols[low].appendChild(t.tile);
-        heights[low] += cw * s * t.it.h / t.it.w + 30 + EW_GAP;
-        var v = t.box.querySelector("video");
+        heights[low] += cw * t.it.h / t.it.w + 30 + EW_GAP;
+        var v = t.tile.querySelector("video");
         if (v) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
       });
     }
-
-    /* Visor de una pieza */
-    var viewer = el("div", "ew-view");
-    var stage = el("div", "ew-stage");
-    var meta = el("div", "ew-meta");
-    var counter = el("div", "ew-counter");
-    var cap = el("div", "ew-caption");
-    var back = el("span", "ew-back", "Grid");
-    meta.appendChild(counter);
-    meta.appendChild(cap);
-    meta.appendChild(back);
-    viewer.appendChild(stage);
-    viewer.appendChild(meta);
-
-    var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    var cur = null;
-    if (fine) {
-      cur = el("span", "viewer-cursor", "→");
-      cur.setAttribute("aria-hidden", "true");
-      viewer.appendChild(cur);
-      stage.classList.add("has-cursor");
-      stage.addEventListener("mouseenter", function (e) { moveCur(e); cur.classList.add("on"); });
-      stage.addEventListener("mousemove", moveCur);
-      stage.addEventListener("mouseleave", function () { cur.classList.remove("on"); });
-    }
-    function moveCur(e) {
-      var rv = viewer.getBoundingClientRect();
-      var rs = stage.getBoundingClientRect();
-      cur.style.transform =
-        "translate(" + (e.clientX - rv.left) + "px," + (e.clientY - rv.top) + "px) translate(-50%,-50%)";
-      var arrow = e.clientX - rs.left > rs.width / 2 ? "→" : "←";
-      if (cur.textContent !== arrow) cur.textContent = arrow;
-    }
-
-    stage.addEventListener("click", function (e) {
-      var r = stage.getBoundingClientRect();
-      step(e.clientX - r.left > r.width / 2 ? 1 : -1);
-    });
-    back.addEventListener("click", function () { view(-1); });
-
-    function show() {
-      var it = EW[idx];
-      stage.textContent = "";
-      var m = makeMedia(EW_BASE + it.file);
-      stage.appendChild(m);
-      counter.textContent = idx + 1 + " / " + n;
-      cap.textContent = it.caption || "";
-    }
-
-    function view(i) {
-      idx = i;
-      if (i < 0) {
-        viewer.classList.remove("on");
-        stage.textContent = ""; // para los vídeos
-        return;
-      }
-      show();
-      viewer.classList.add("on");
-    }
-
-    function step(d) {
-      if (idx < 0 || n <= 1) return;
-      idx = (idx + d + n) % n;
-      show();
-    }
-
-    /* El visor va fuera del área con scroll para que siempre cubra la ventana */
-    var wrap = el("div", "ew-wrap");
-    wrap.appendChild(body);
-    wrap.appendChild(viewer);
-    sheet.appendChild(wrap);
 
     var closing = false;
     function close() {
@@ -701,11 +625,7 @@
     }
 
     function onKey(e) {
-      if (e.key === "Escape") {
-        if (idx >= 0) view(-1);
-        else close();
-      } else if (e.key === "ArrowRight") step(1);
-      else if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "Escape") close();
     }
 
     backdrop.addEventListener("click", close);
