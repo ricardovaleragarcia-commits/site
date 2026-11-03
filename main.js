@@ -560,11 +560,15 @@
       if (i > 5) im.loading = "lazy";
       im.addEventListener("contextmenu", noMenu);
       box.appendChild(im);
-      if (it.caption) box.appendChild(el("div", "ew-cap", it.caption));
       tile.appendChild(box);
+      var capEl = null;
+      if (it.caption) {
+        capEl = el("div", "ew-cap", it.caption);
+        tile.appendChild(capEl);
+      }
       tile.addEventListener("click", function () { view(i); });
       grid.appendChild(tile);
-      tiles.push({ tile: tile, box: box, it: it });
+      tiles.push({ tile: tile, box: box, cap: capEl, it: it });
     });
     body.appendChild(grid);
 
@@ -576,13 +580,18 @@
       if (!gw) return;
       var colW = (gw - EW_GAP * (c.cols - 1)) / c.cols;
       grid.style.gridTemplateColumns = "repeat(" + c.cols + ", minmax(0, 1fr))";
+      /* primero columnas y alto de la imagen; luego, ya con el ancho fijado, se mide
+         el pie (puede ocupar más de una línea) para calcular las filas */
       tiles.forEach(function (t) {
         var s = Math.min(c.cols, c.span[t.it.size] || c.span.M);
         var w = colW * s + EW_GAP * (s - 1);
-        var h = Math.round(w * t.it.h / t.it.w);
+        t.h = Math.round(w * t.it.h / t.it.w);
         t.tile.style.gridColumn = "span " + s;
-        t.tile.style.gridRow = "span " + (h + EW_GAP);
-        t.box.style.height = h + "px";
+        t.box.style.height = t.h + "px";
+      });
+      tiles.forEach(function (t) {
+        var capH = t.cap ? t.cap.offsetHeight : 0;
+        t.tile.style.gridRow = "span " + (t.h + capH + EW_GAP);
       });
     }
 

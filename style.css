@@ -422,19 +422,9 @@ p { margin: 0; }
 }
 
 .ew-cap {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  max-width: 100%;
-  padding: 6px 14px;
-  background: #fff;
-  color: #4c4c4c;
-  opacity: 0;
-  transition: opacity 0.15s;
-  pointer-events: none;
+  padding-top: 6px;
+  color: #000;
 }
-
-@media (hover: hover) { .ew-tile:hover .ew-cap { opacity: 1; } }
 
 /* Visor: tapa la rejilla; la pieza va entera (sin recortar) */
 .ew-view {
