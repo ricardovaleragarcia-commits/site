@@ -507,6 +507,8 @@
   var EW_BASE = typeof ELSEWHERE_BASE !== "undefined" ? ELSEWHERE_BASE : "";
   var EW_GAP = 15;
 
+  function ewUrl(it) { return EW_BASE + encodeURIComponent(it.file); } // nombres con espacios, acentos, &, +, ^
+
   function ewIsVideo(it) { return /\.(mp4|webm)$/i.test(it.file); }
 
   var ewPreloaded = false;
@@ -515,7 +517,7 @@
     ewPreloaded = true;
     EW.slice(0, saveData ? 12 : EW.length).forEach(function (it) {
       if (!/\.webp$/i.test(it.file)) return;
-      preloadImg(EW_BASE + it.file);
+      preloadImg(ewUrl(it));
     });
   }
 
@@ -553,13 +555,13 @@
       box.style.aspectRatio = it.w + " / " + it.h;
       var node;
       if (ewIsVideo(it)) {
-        node = makeMedia(EW_BASE + it.file); // en marcha desde que se abre
+        node = makeMedia(ewUrl(it)); // en marcha desde que se abre
         node.disablePictureInPicture = true;
         node.setAttribute("disableremoteplayback", "");
         node.setAttribute("controlslist", "nodownload noremoteplayback");
       } else {
         node = new Image();
-        node.src = EW_BASE + it.file;
+        node.src = ewUrl(it);
         node.alt = it.caption || "";
         node.decoding = "async";
         if (i > 5) node.loading = "lazy";
