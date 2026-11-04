@@ -5,7 +5,7 @@
 var ELSEWHERE_BASE = "assets/elsewhere/";
 var ELSEWHERE = [
   { file: "temps.webp", w: 1100, h: 1439, caption: "temps" },
-  { file: "eureka.webp", w: 998, h: 905, caption: "eureka!" },
+  { file: "parachilna jury final.webp", w: 1100, h: 745, caption: "parachilna jury final" },
   { file: "evernote premium features.mp4", w: 1280, h: 720, caption: "evernote premium features" },
   { file: "tenerife 27.webp", w: 620, h: 761, caption: "tenerife 27" },
   { file: "martin stickers.webp", w: 1100, h: 1489, caption: "martin stickers" },
@@ -18,7 +18,7 @@ var ELSEWHERE = [
   { file: "duality concept test.png.webp", w: 1100, h: 893, caption: "duality concept test" },
   { file: "mande pic treatment.webp", w: 1100, h: 1420, caption: "mandé pic treatment" },
   { file: "duality concept test.jpg.webp", w: 1100, h: 1296, caption: "duality concept test" },
-  { file: "parachilna jury final.webp", w: 1100, h: 745, caption: "parachilna jury final" },
+  { file: "eureka.webp", w: 998, h: 905, caption: "eureka!" },
   { file: "insta profile pic.webp", w: 1100, h: 1100, caption: "insta profile pic" },
   { file: "^-^.webp", w: 1100, h: 1556, caption: "^-^" },
   { file: "mandé masks.webp", w: 1100, h: 1058, caption: "mandé masks" },
